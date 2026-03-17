@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio — Matheus Bianco</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Source Sans 3', sans-serif; font-size: 10pt; line-height: 1.5; color: #2d3748; padding: 0 15mm; }
+    h1 { font-size: 18pt; margin: 24pt 0 12pt; color: #1e3a5f; border-bottom: 2px solid #c4953a; padding-bottom: 6pt; }
+    h2 { font-size: 12pt; margin: 18pt 0 8pt; color: #1e3a5f; }
+    h3 { font-size: 11pt; margin: 12pt 0 6pt; color: #2d3748; }
+    p { margin-bottom: 8pt; }
+    ul { margin: 6pt 0 12pt 18pt; }
+    li { margin-bottom: 4pt; }
+    .intro { margin-bottom: 20pt; }
+    .intro h1 { margin-top: 0; }
+    .intro .subtitle { font-size: 12pt; color: #5a6578; margin-bottom: 8pt; }
+    .stats { display: flex; gap: 24pt; margin: 16pt 0; padding: 12pt; background: #f6f7f8; border-radius: 4px; }
+    .stats-item { flex: 1; }
+    .stats-item strong { display: block; font-size: 14pt; color: #c4953a; }
+    .stats-item span { font-size: 9pt; color: #5a6578; }
+    .project { margin-bottom: 24pt; padding-bottom: 16pt; border-bottom: 1px solid #e2e6ea; break-inside: avoid; }
+    .project:last-child { border-bottom: none; }
+    .project h3 { margin-top: 0; font-size: 11pt; margin-bottom: 8pt; }
+    .project .context { font-size: 9pt; color: #5a6578; margin-bottom: 8pt; font-style: italic; }
+    .project .solution { margin-bottom: 8pt; font-size: 9pt; }
+    .project .tags { font-size: 8pt; color: #5a6578; margin-top: 8pt; }
+    .project-imgs { display: flex; gap: 16pt; justify-content: center; flex-wrap: wrap; margin: 12pt 0; }
+    .project-img { max-width: 320px; width: 48%; min-width: 200px; height: auto; border-radius: 4px; display: block; border: 1px solid #e2e6ea; }
+    .skill-group { margin-bottom: 12pt; break-inside: avoid; }
+    .skill-group ul { margin-left: 0; list-style: none; }
+    .skill-group li { padding-left: 12pt; position: relative; }
+    .skill-group li::before { content: "•"; position: absolute; left: 0; color: #c4953a; }
+    .contact-item { margin-bottom: 8pt; }
+    .contact-item strong { display: inline-block; width: 80pt; }
+    .profile-photo { display: block; margin: 0 auto 12pt; width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid #e2e6ea; }
+    @media print { body { padding: 0 12mm; } h1 { margin-top: 16pt; } .project, .skill-group { break-inside: avoid; } .project-imgs { justify-content: center; } .project-img { max-width: 300px; } }
+  </style>
+</head>
+<body>
+
+  <section class="intro">
+    <h1>Matheus Bianco</h1>
+    <p class="subtitle">Consultor em Dados, Sistemas e Análises de Políticas Públicas Educacionais</p>
+    <p>Desenvolvimento de sistemas analíticos e ferramentas de dados para a tomada de decisão baseada em evidências na educação pública.</p>
+    <div class="stats">
+      <div class="stats-item"><strong>368</strong> Unidades Escolares <span>(202 Sergipe · 166 Joinville)</span></div>
+      <div class="stats-item"><strong>169.000</strong> Alunos <span>(90.000 Sergipe · 79.000 Joinville)</span></div>
+    </div>
+  </section>
+
+  <h1>Sobre Mim</h1>
+  <img src="assets/images/profile.jpeg" alt="Matheus Bianco" class="profile-photo">
+  <h2>Formação</h2>
+  <p>Graduado em Relações Internacionais e mestre em Estudos Estratégicos Internacionais, ambos pela Universidade Federal do Rio Grande do Sul (UFRGS). Especialização em Data Science and Analytics pela USP/ESALQ.</p>
+  <h2>Atuação Atual</h2>
+  <p>Consultor da Unidade de Migração (SCL/MIG) do Inter-American Development Bank (BID), apoiando o componente de inclusão educacional de migrantes na operação "Educação que Transforma" (Joinville/SC). Conduzo diagnósticos técnicos, análises quantitativas e qualitativas e formulação de recomendações baseadas em evidências.</p>
+  <p>Coordenador de Apoio Estratégico da Secretaria Municipal de Educação de Joinville, apoiando o Secretário no monitoramento de iniciativas prioritárias, elaboração de estudos técnicos e liderança de projetos estratégicos.</p>
+  <p>Consultor de Dados e Sistemas na Fundação Getulio Vargas (FGV), apoiando a Secretaria de Estado da Educação de Sergipe na estruturação de diagnósticos, sistemas de monitoramento e análises aplicadas à aprendizagem e ao fluxo escolar.</p>
+  <h2>Escopo de Atuação</h2>
+  <p>Experiência em âmbito municipal (São Luís/MA, Joinville/SC), estadual (Sergipe, Mato Grosso do Sul) e em cooperação com organismos internacionais: BID, ABC, AFD e CAF.</p>
+
+  <h1>Competências</h1>
+  <div class="skill-group">
+    <h2>Competências Técnicas</h2>
+    <h3>Ciência de Dados</h3>
+    <ul><li>Python (Pandas, NumPy)</li><li>Análise Estatística</li><li>Modelagem de Dados</li><li>Indicadores de Risco</li></ul>
+    <h3>Engenharia de Dados</h3>
+    <ul><li>Pipelines de ETL</li><li>SQL / PostgreSQL</li><li>Integração de Múltiplas Fontes</li></ul>
+    <h3>Visualização</h3>
+    <ul><li>Power BI</li><li>Looker Studio</li><li>Chart.js / Leaflet.js</li></ul>
+    <h3>Desenvolvimento Web</h3>
+    <ul><li>Google Apps Script</li><li>HTML / CSS / JavaScript</li><li>Django / Node.js</li></ul>
+    <h3>Engenharia de IA</h3>
+    <ul><li>Agentes de IA</li><li>Construção de itens a partir de Matriz de Referência</li><li>Integração de LLMs</li></ul>
+  </div>
+  <div class="skill-group">
+    <h2>Domínios de Conhecimento</h2>
+    <h3>Sistemas Educacionais</h3>
+    <ul><li>SAEB / IDEB</li><li>Censo Escolar (INEP)</li><li>Monitoramento da Trajetória do Estudante</li></ul>
+    <h3>Educação Inclusiva</h3>
+    <ul><li>Monitoramento de Estudantes Imigrantes</li><li>Indicadores de Equidade</li><li>Programas de Recomposição</li></ul>
+    <h3>Análise Governamental</h3>
+    <ul><li>Governança Multinível</li><li>Cooperação Internacional (ABC, AFD, CAF, BID)</li><li>Planejamento Estratégico & OKRs</li></ul>
+  </div>
+
+  <h1>Projetos</h1>
+
+  <div class="project">
+    <h3>01 — Plataforma de Indicadores de Risco Educacional</h3>
+    <p class="context">A SED Sergipe necessitava de uma abordagem sistemática para identificar escolas e estudantes em risco em múltiplas dimensões (abandono, reprovação, frequência, desempenho). O desafio era integrar dados de múltiplas fontes: sistema estadual, SAEB, SAESE, Plurall e INSE.</p>
+    <p class="solution">Plataforma integrada em Python que processa ~597 MB de registros e gera indicadores compostos por escola. Pipeline de ETL com extração, limpeza, cálculo de indicadores (abandono, reprovação, frequência, notas, distorção idade-série), classificação de risco e cruzamento com SAEB/SAESE/Plurall. Produto final: planilha consolidada com dicionário de dados.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project1/1.jpg" alt="Projeto 1 - Tela de login" class="project-img">
+      <img src="assets/images/projects/project1/2.jpg" alt="Projeto 1 - Painel de indicadores" class="project-img">
+    </div>
+    <p class="tags">Python · Pandas · ETL · SAEB · Looker Studio</p>
+  </div>
+
+  <div class="project">
+    <h3>02 — Painel de Monitoramento de Estudantes Imigrantes</h3>
+    <p class="context">Joinville atende 3.923 alunos imigrantes de 47 nacionalidades em 170 escolas. A administração necessitava de um instrumento para mapear a população, compreender distribuição geográfica e escolar, acompanhar desempenho e subsidiar políticas de acolhimento.</p>
+    <p class="solution">Sistema em duas camadas: pipeline Python processando 6 anos de registros (2021–2026), identificação de imigrantes por nacionalidade, deduplicação e geração de 18+ CSVs analíticos. Aplicação web com mapa Leaflet.js (170 escolas), 10+ gráficos interativos (nacionalidade, gênero, curso, turno, etapa), integração com programa Innovamat e geração de relatórios PDF por escola.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project2/1.jpg" alt="Projeto 2 - Mapa interativo" class="project-img">
+      <img src="assets/images/projects/project2/2.jpg" alt="Projeto 2 - Dashboard" class="project-img">
+    </div>
+    <p class="tags">Python · Google Apps Script · Leaflet.js · Chart.js</p>
+  </div>
+
+  <div class="project">
+    <h3>03 — Sistema de Acompanhamento de Dados GA/SE</h3>
+    <p class="context">A Gerência de Avaliação da SED Sergipe necessitava de um sistema integrado para acompanhar movimentação (abandonos, transferências, evasões), reprovação por componente curricular e frequência escolar. Dados na API da SED, mas exigiam consolidação e painel web com login.</p>
+    <p class="solution">Painel web com extração via API, tratamento em Python e três módulos: Movimentação (abandonos, transferências, evasões, cancelamentos com histórico temporal), Reprovação (rendimento, reprovação por componente/área, ranking de escolas), Frequência (monitoramento de infrequência por faixa). Interface segura com autenticação e filtros por ano, DRE e escola.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project3/1.jpg" alt="Projeto 3 - Análise de reprovação" class="project-img">
+      <img src="assets/images/projects/project3/2.jpg" alt="Projeto 3 - Movimentação" class="project-img">
+    </div>
+    <p class="tags">Python · API · Google Apps Script</p>
+  </div>
+
+  <div class="project">
+    <h3>04 — Sistema de Gestão de Avaliações Diagnósticas</h3>
+    <p class="context">A rede estadual de Sergipe implementou avaliações diagnósticas com a plataforma Plurall em 201 escolas e 10 DREs. O ciclo — agendamento, aplicação, consolidação — exigia um sistema coordenado para gerenciar logística e dar visibilidade em tempo real.</p>
+    <p class="solution">Aplicação web em Google Apps Script com login (Admin, DRE, Escola), módulo de agendamento (datas e turnos para 1ª–3ª série em LP e Matemática), processamento de resultados (upload Plurall/Somos, mapeamento 221 escolas), dashboard de agendamento e dashboard de resultados (participação, desempenho por escola/série/disciplina). Banco em Google Sheets com 7 abas especializadas.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project4/1.jpg" alt="Projeto 4 - Login" class="project-img">
+      <img src="assets/images/projects/project4/2.jpg" alt="Projeto 4 - Dashboard" class="project-img">
+    </div>
+    <p class="tags">Google Apps Script · Bootstrap · Chart.js · Google Sheets</p>
+  </div>
+
+  <div class="project">
+    <h3>05 — Painel de Recomposição de Aprendizagens</h3>
+    <p class="context">Joinville implementou programa de recomposição para estudantes com defasagens. A gestão demandava um painel para acompanhar participação, medir progresso nas atividades de recuperação e gerar relatórios acionáveis para gestores escolares.</p>
+    <p class="solution">Dashboard web com backend Google Apps Script (DataService.js, Code.js), interface responsiva com login, sidebar, KPIs, busca e filtragem de alunos. Pré-processamento Node.js para CSVs via Google APIs. Integração jsPDF para geração automatizada de relatórios com tabelas formatadas por escola. Acompanhamento de progresso e atividades.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project5/1.jpg" alt="Projeto 5 - Login" class="project-img">
+      <img src="assets/images/projects/project5/2.jpg" alt="Projeto 5 - Dashboard" class="project-img">
+    </div>
+    <p class="tags">Google Apps Script · Node.js · jsPDF · Google APIs</p>
+  </div>
+
+  <div class="project">
+    <h3>06 — Sistema de Monitoramento Temporal de Risco</h3>
+    <p class="context">A SED Sergipe gerava relatórios Excel diários de risco por aluno, escola, série e turma. A análise isolada não permitia identificar tendências nem avaliar se as intervenções reduziam o risco ao longo do tempo.</p>
+    <p class="solution">Sistema automatizado que transforma relatórios diários em ferramenta longitudinal: extração de datas dos nomes de arquivos (DD.MM.AAAA, DD_MM), processamento padronizado (risco_reprovacao = "Sim"), agregação por escola/INEP, série, turma e data. Saídas: base_temporal_detalhada.xlsx e resumo_temporal.xlsx com totais diários de alunos em risco, escolas afetadas e turmas impactadas.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project6/1.png" alt="Projeto 6 - Média por escola" class="project-img">
+      <img src="assets/images/projects/project6/2.png" alt="Projeto 6 - Dashboard" class="project-img">
+    </div>
+    <p class="tags">Python · Pandas · Séries Temporais · Excel</p>
+  </div>
+
+  <div class="project">
+    <h3>07 — Sistema de Priorização de Escolas para o SAEB</h3>
+    <p class="context">A preparação para o SAEB 2025 exigia identificar e priorizar escolas que mais necessitavam de apoio. Com centenas de escolas, uma seleção subjetiva não alocaria eficientemente os recursos limitados.</p>
+    <p class="solution">Ferramenta de priorização multicritério: definição de critérios baseados em indicadores de desempenho e risco, análise em Python com pontuações compostas, dashboard HTML interativo e aplicação web em Google Apps Script com sidebar para a equipe gestora. Cenários de priorização (8 ou 10 escolas/articulador), filtros por DRE e ajuste de pesos (Participação, Rendimento).</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project7/1.jpg" alt="Projeto 7 - Dashboard" class="project-img">
+      <img src="assets/images/projects/project7/2.jpg" alt="Projeto 7 - Gráfico por DRE" class="project-img">
+    </div>
+    <p class="tags">Python · Google Apps Script · HTML · Análise Multicritério</p>
+  </div>
+
+  <div class="project">
+    <h3>08 — Painel de Indicadores Educacionais — IDEB & Censo</h3>
+    <p class="context">A SED Sergipe necessitava de infraestrutura que consolidasse IDEB e Censo Escolar em painel analítico para análises comparativas entre estados, regiões e séries históricas. Dados de múltiplas fontes, anos e formatos.</p>
+    <p class="solution">Repositório integrado com séries históricas do IDEB (2022–2024) e microdados do Censo 2023. Pipeline de padronização (códigos UF, etapas, definições), cruzamento entre IDEB, infraestrutura do Censo e Indicadores Compostos de Gestão (ICG). Documentação técnica completa do pipeline e definições de indicadores.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project8/1.png" alt="Projeto 8 - Rankings" class="project-img">
+      <img src="assets/images/projects/project8/2.png" alt="Projeto 8 - Infraestrutura" class="project-img">
+    </div>
+    <p class="tags">Python · Dados INEP · CSV · Pipeline de Dados</p>
+  </div>
+
+  <h1>Contato</h1>
+  <div class="contact-item"><strong>E-mail:</strong> matheusibellib@gmail.com</div>
+  <div class="contact-item"><strong>LinkedIn:</strong> linkedin.com/in/matheus-ibelli-bianco-505155220</div>
+  <div class="contact-item"><strong>GitHub:</strong> github.com/Matheus-Bianco</div>
+  <div class="contact-item"><strong>Localização:</strong> Joinville, Santa Catarina</div>
+
+</body>
+</html>
