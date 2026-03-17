@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de priorização de escolas para aplicação do SAEB com base em indicadores e critérios objetivos.">
+  <title>Sistema de Priorização de Escolas para o SAEB — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">07</div>
+      <h1>Sistema de Priorização de Escolas para o SAEB</h1>
+      <p>Classificação multicritério baseada em dados para preparação da avaliação nacional</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Sergipe / FGV DGPE</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-bullseye"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">Preparação para o SAEB 2025</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2025</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A preparação da rede estadual de Sergipe para o SAEB 2025 (Sistema de Avaliação da Educação Básica) exigia a identificação e priorização das escolas que mais necessitavam de apoio técnico e pedagógico para melhorar seus resultados na avaliação nacional. Com centenas de escolas na rede, um processo subjetivo de seleção não conseguiria alocar eficientemente os recursos limitados de preparação onde teriam maior impacto.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project7/1.jpg" alt="Dashboard de priorização SAEB 2025">
+              <figcaption>Dashboard principal: lista unificada de 201 escolas, cenários de priorização por articuladores (8 ou 10 escolas/art.), filtros por DRE e pesos dos critérios (Participação, Rendimento)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project7/2.jpg" alt="Gráfico de escolas por DRE">
+              <figcaption>Gráfico de escolas por Diretoria Regional — distribuição por Cenário 1 e Cenário 2, com filtros de DRE e ajuste de pesos dos critérios</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project7/3.jpg" alt="Ranking geral de escolas">
+              <figcaption>Ranking geral de escolas com score multicritério (Participação, Rendimento, Aprovação 2025), prioridade e detalhamento por escola</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Desenvolvi uma ferramenta interativa de priorização que aplica análise multicritério para classificar objetivamente as escolas:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Definição de critérios:</strong> Estabelecimento de critérios de priorização baseados em indicadores de desempenho, níveis de risco e características das escolas</li>
+            <li><i class="fas fa-check"></i> <strong>Análise em Python:</strong> Script de processamento que aplica a lógica multicritério ao dataset de escolas e calcula pontuações compostas de prioridade</li>
+            <li><i class="fas fa-check"></i> <strong>Dashboard HTML interativo:</strong> Visualização gerada para navegação nos resultados de priorização</li>
+            <li><i class="fas fa-check"></i> <strong>Aplicação web:</strong> Interface em Google Apps Script com navegação por sidebar, implantada como aplicação web para uso direto pela equipe gestora</li>
+            <li><i class="fas fa-check"></i> <strong>Guias de implantação:</strong> Instruções completas de instalação para Google Apps Script e deploy como aplicação web</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Dataset de priorização multi-indicador por escola (csv.priorizacao.csv)</li>
+            <li><i class="fas fa-table"></i> Resultados históricos de avaliações externas</li>
+            <li><i class="fas fa-table"></i> Indicadores de risco educacional da rede</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">HTML / CSS / JavaScript</span>
+            <span class="tag">CSV</span>
+            <span class="tag">Análise Multicritério</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>A ferramenta de priorização permitiu à Secretaria de Educação de Sergipe direcionar objetivamente os esforços de preparação para o SAEB 2025 às escolas com maior necessidade de apoio. O sistema substituiu processos subjetivos de seleção por uma metodologia transparente, baseada em dados e replicável — contribuindo para uma alocação mais eficiente de recursos pedagógicos e técnicos em toda a rede estadual.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

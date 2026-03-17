@@ -1,0 +1,35 @@
+PROJETO 8 — Painel de Indicadores Educacionais (IDEB & Censo)
+==============================================================
+
+Coloque as 5 imagens na pasta com os nomes exatos abaixo (1.png a 5.png).
+Cada arquivo deve corresponder ao conteúdo descrito (a legenda no site sincroniza pelo número).
+
+1.png = RANKINGS E INDICADORES (4 GRÁFICOS)
+   - 4 gráficos de barras horizontais lado a lado:
+     * Ranking Nordeste – IDEB (Pernambuco 4.5, Ceará 4.4, Sergipe 3.7 em verde...)
+     * Top 10 Brasil – IDEB (Goiás 4.8, ES 4.7...)
+     * SAEB Matemática (PE 274.1, Sergipe 257.3 em verde...)
+     * SAEB Português e Taxa de Aprovação
+   - Ano: 2023 em todos os gráficos
+
+2.png = INFRAESTRUTURA DAS ESCOLAS ESTADUAIS
+   - Título: "Infraestrutura das Escolas Estaduais — Sergipe - 201 Escolas | Censo Escolar 2023"
+   - 4 cards: 100% Água Potável, 89% Internet Alunos, 90% Banheiro Acessível, 62% Quadra
+   - Gráfico: "Percentual de Escolas com Cada Recurso" (Água, Energia, Esgoto, Banheiro, Biblioteca, Lab, Internet, Quadra)
+
+3.png = RECURSOS PEDAGÓGICOS E TECNOLÓGICOS
+   - Gráfico de barras: "Recursos Pedagógicos e Tecnológicos por DRE (%)"
+   - Categorias: Biblioteca, Lab Informática, Internet Alunos, Banda Larga
+   - Tabela abaixo com valores por DRE (ex.: 36/40, 40/40) e linha TOTAL
+
+4.png = IDEB ENSINO MÉDIO 2005-2023
+   - Título: "Gestão para a Aprendizagem — IDEB Ensino Médio Estadual (2005-2023)"
+   - Seção "Sergipe em Destaque" com 6 cards (IDEB 2023, Evolução, Posição Nordeste/Brasil, Taxa Aprovação, SAEB Mat)
+   - Gráfico de linha: Evolução do IDEB (Sergipe, Média Nordeste, Média Brasil)
+   - Cards: Ranking Nordeste - IDEB e Top 10 Brasil - IDEB
+
+5.png = PAINEL DE SUPORTE DE DADOS (MAPA)
+   - Título: "Painel de Suporte de Dados - Avaliação das Unidades Escolares"
+   - Mapa de Sergipe com DREs coloridos por taxa de participação
+   - Sidebar: Indicador SAEB, Diretoria Regional, resumo (197 escolas, 90.1% média)
+   - Seção: Top 10 Escolas — Taxa de Participação (gráfico de barras + ranking)

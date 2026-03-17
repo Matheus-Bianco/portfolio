@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de Acompanhamento de Dados GA/SE da SED Sergipe. Dados extraídos via API, tratados em Python e dispostos em painel web com login.">
+  <title>Sistema de Acompanhamento de Dados GA/SE — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">03</div>
+      <h1>Sistema de Acompanhamento de Dados GA/SE</h1>
+      <p>Painel web da Gerência de Avaliação da SED Sergipe para monitoramento de movimentação, reprovação e frequência escolar na rede estadual.</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Sergipe / FGV DGPE</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-users"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">Rede Estadual de Sergipe</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2023–2025</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A Gerência de Avaliação da SED Sergipe necessitava de um sistema integrado para acompanhar indicadores críticos da rede estadual: movimentação de alunos (abandonos, transferências, evasões, cancelamentos), reprovação por componente curricular e área de conhecimento, e frequência escolar. Os dados estavam disponíveis em sistemas internos, mas a consolidação e visualização para apoio à decisão exigiam uma solução centralizada e acessível aos gestores.</p>
+          <p>O desafio era integrar dados da API da SED, tratá-los de forma automatizada e disponibilizá-los em um painel web seguro, com sistema de login, para a equipe de avaliação.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project3/1.jpg" alt="Análise de reprovação">
+              <figcaption>Análise de reprovação: distribuição de rendimentos, distribuição da reprovação por tipo e escolas com maior reprovação</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project3/2.jpg" alt="Histórico de movimentação de alunos">
+              <figcaption>Acompanhamento de abandonos, transferências, evasões e cancelamentos — histórico de movimentação ao longo dos anos</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project3/3.jpg" alt="Monitoramento de frequência escolar">
+              <figcaption>Monitoramento de frequência escolar: distribuição de alunos por faixa de frequência (Sistema GA/SE — SED Sergipe)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Desenvolvi o Sistema de Acompanhamento de Dados GA/SE, um painel web com sistema de login que consolida dados da rede estadual de Sergipe em três módulos principais:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Extração via API:</strong> Dados extraídos da API da SED Sergipe, garantindo atualização a partir das fontes oficiais</li>
+            <li><i class="fas fa-check"></i> <strong>Tratamento em Python:</strong> Pipeline de processamento para limpeza, padronização e agregação dos dados antes da exibição</li>
+            <li><i class="fas fa-check"></i> <strong>Módulo Movimentação:</strong> Acompanhamento de abandonos, transferências (internas e externas), evasões e cancelamentos, com histórico temporal e detalhamento por escola</li>
+            <li><i class="fas fa-check"></i> <strong>Módulo Reprovação:</strong> Análise de rendimento escolar, reprovação por componente curricular e área de conhecimento, distribuição por tipo (média, faltas, falta de nota) e ranking de escolas</li>
+            <li><i class="fas fa-check"></i> <strong>Módulo Frequência:</strong> Monitoramento da frequência escolar e alunos em situação de infrequência, com distribuição por faixa de frequência</li>
+            <li><i class="fas fa-check"></i> <strong>Painel web com login:</strong> Interface segura com sistema de autenticação, filtros por ano letivo, DRE e escola</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Fonte de Dados</h2>
+          <ul>
+            <li><i class="fas fa-plug"></i> API da SED Sergipe — dados oficiais da rede estadual</li>
+            <li><i class="fas fa-table"></i> Dados de movimentação, reprovação e frequência escolar</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">API</span>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">HTML/CSS/JS</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O Sistema GA/SE passou a oferecer à Gerência de Avaliação da SED Sergipe uma visão unificada e atualizada de movimentação, reprovação e frequência na rede estadual. Os gestores podem filtrar por ano, DRE e escola, acompanhar tendências ao longo do tempo e identificar rapidamente unidades com indicadores críticos — apoiando decisões baseadas em evidências para políticas de fluxo escolar e intervenções pedagógicas.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

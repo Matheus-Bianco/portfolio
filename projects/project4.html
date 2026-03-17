@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de gestão de avaliações diagnósticas para secretarias de educação. Automação e análise de resultados.">
+  <title>Sistema de Gestão de Avaliações Diagnósticas — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">04</div>
+      <h1>Sistema de Gestão de Avaliações Diagnósticas</h1>
+      <p>Plataforma completa para agendamento e análise de resultados de avaliações</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Sergipe / FGV DGPE</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-users"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">201 escolas, 10 diretorias regionais</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A rede estadual de Sergipe implementou avaliações diagnósticas formativas em parceria com a plataforma Plurall, envolvendo 201 escolas distribuídas em 10 Diretorias Regionais. O ciclo de avaliação — do agendamento à aplicação e consolidação de resultados — exigia um sistema coordenado capaz de gerenciar a logística em centenas de escolas e fornecer visibilidade em tempo real sobre participação e resultados de desempenho.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project4/1.jpg" alt="Tela de login do Sistema de Agendamentos">
+              <figcaption>Tela de login do Sistema de Agendamentos — Avaliação Diagnóstica 2026 (SEED Sergipe / FGV DGPE)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project4/2.jpg" alt="Dashboard de agendamentos">
+              <figcaption>Dashboard de agendamentos: resumo geral (escolas agendadas, pendentes, % da rede) e evolução dos agendamentos acumulados ao longo do tempo</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project4/3.jpg" alt="Densidade de agendamentos">
+              <figcaption>Densidade de agendamentos por data e turno — tabela com distribuição por série (1ª, 2ª, 3ª) e turno (manhã, tarde, noite), com indicador visual de carga (baixa, média, alta)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project4/4.jpg" alt="Painel de resultados das avaliações">
+              <figcaption>Sistema de Avaliações: painel com métricas gerais (escolas avaliadas, alunos participantes, rendimento médio) e gráficos de participação e rendimento por DRE</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Desenvolvi uma aplicação web completa em Google Apps Script com arquitetura modular:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Autenticação e controle de acesso:</strong> Sistema de login com três perfis — Administrador (acesso total), DRE/Regional (visão da diretoria) e Escola (agendamento individual)</li>
+            <li><i class="fas fa-check"></i> <strong>Módulo de agendamento:</strong> Interface para escolas definirem datas e turnos de aplicação (matutino, vespertino, noturno) para 1ª a 3ª série do Ensino Médio em Língua Portuguesa e Matemática</li>
+            <li><i class="fas fa-check"></i> <strong>Processamento de resultados:</strong> Upload de dados brutos das plataformas Plurall e Somos, cruzamento com tabela de mapeamento de escolas (221 escolas, conversão Plurall → código INEP)</li>
+            <li><i class="fas fa-check"></i> <strong>Dashboard de agendamento:</strong> Visão consolidada do progresso de agendamentos por diretoria regional</li>
+            <li><i class="fas fa-check"></i> <strong>Dashboard de resultados:</strong> Painel analítico com indicadores de desempenho por escola, série e disciplina — taxas de participação, percentuais de desempenho em LP e Matemática, tempos médios de resposta</li>
+            <li><i class="fas fa-check"></i> <strong>Painel administrativo:</strong> Gestão de usuários, configurações do sistema e histórico de uploads</li>
+          </ul>
+          <p>O banco de dados foi estruturado em Google Sheets com 7 abas especializadas: DePara (mapeamento de escolas), Acompanhamento, Resultados_Brutos, Resultados_Processados, Historico_Uploads, Config_Resultados e Lista_Noturno.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Tabela de mapeamento — 221 escolas (códigos Plurall ↔ INEP)</li>
+            <li><i class="fas fa-table"></i> Dados brutos de acompanhamento da plataforma Plurall</li>
+            <li><i class="fas fa-table"></i> Resultados brutos do sistema Somos</li>
+            <li><i class="fas fa-table"></i> Dados de configuração de avaliações (períodos, turnos, disciplinas)</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">HTML5 / CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bootstrap 5</span>
+            <span class="tag">Chart.js</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O sistema viabilizou a coordenação centralizada do agendamento de avaliações diagnósticas em 201 escolas, eliminando processos manuais de consolidação e fornecendo visibilidade em tempo real sobre participação e desempenho dos estudantes. Gestores das Diretorias Regionais e da Secretaria de Educação puderam monitorar os indicadores de desempenho em Língua Portuguesa e Matemática de forma desagregada, subsidiando diretamente decisões pedagógicas e o planejamento de ações de reforço escolar.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

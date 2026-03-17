@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento Temporal de Risco de Reprovação — SEDUC Sergipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-light: #2a5298;
+      --secondary: #c4953a;
+      --secondary-light: #d4a84b;
+      --accent: #f6f7f8;
+      --text: #2d3748;
+      --text-light: #5a6578;
+      --white: #ffffff;
+      --border: #e2e6ea;
+      --green: #38a169;
+      --red: #e53e3e;
+      --orange: #dd6b20;
+      --radius: 8px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, sans-serif;
+      background: var(--accent);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- Header --- */
+    .header {
+      background: linear-gradient(135deg, #2d1b4e 0%, var(--primary) 40%, var(--primary-light) 100%);
+      color: var(--white);
+      padding: 32px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(196, 149, 58, 0.08) 0%, transparent 50%);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .header__badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header__period {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--white);
+    }
+
+    .header p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      max-width: 700px;
+    }
+
+    /* --- KPI Cards --- */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: -28px 0 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .kpi-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+    }
+
+    .kpi-card__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .kpi-card__value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .kpi-card__detail {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    .kpi-card__trend {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 6px;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .kpi-card__trend--down {
+      background: rgba(56, 161, 105, 0.1);
+      color: var(--green);
+    }
+
+    .kpi-card__trend--up {
+      background: rgba(229, 62, 62, 0.1);
+      color: var(--red);
+    }
+
+    /* --- Chart Sections --- */
+    .dashboard {
+      padding: 0 0 40px;
+    }
+
+    .chart-row {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .chart-row--full {
+      grid-template-columns: 1fr;
+    }
+
+    .chart-row--half {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .chart-row--third {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .chart-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+    }
+
+    .chart-card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .chart-card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .chart-card__subtitle {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .chart-wrapper {
+      position: relative;
+    }
+
+    /* --- Data Table --- */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--accent);
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .data-table tr:hover td {
+      background: rgba(196, 149, 58, 0.04);
+    }
+
+    .data-table .number {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .bar-inline {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bar-inline__fill {
+      height: 8px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      transition: width 0.6s ease;
+    }
+
+    .bar-inline__value {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+      min-width: 50px;
+      text-align: right;
+    }
+
+    /* --- Insight Box --- */
+    .insight-box {
+      background: linear-gradient(135deg, rgba(196, 149, 58, 0.08), rgba(196, 149, 58, 0.03));
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+
+    .insight-box__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--secondary);
+      margin-bottom: 6px;
+    }
+
+    .insight-box p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* --- Footer --- */
+    .dash-footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .chart-row--half,
+      .chart-row--third { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+      .header h1 { font-size: 1.3rem; }
+    }
+
+    @media print {
+      body { background: white; }
+      .kpi-grid { margin-top: 16px; }
+      .chart-card, .kpi-card { box-shadow: none; border: 1px solid #ddd; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <div class="header__top">
+        <span class="header__badge">SEDUC Sergipe / FGV DGPE</span>
+        <span class="header__period">28/11/2025 — 06/01/2026</span>
+      </div>
+      <h1>Monitoramento Temporal — Alunos em Risco de Reprovação</h1>
+      <p>Acompanhamento longitudinal da evolução do risco de reprovação na rede estadual de Sergipe, consolidando relatórios diários em séries temporais analíticas.</p>
+    </div>
+  </div>
+
+  <div class="container dashboard">
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-card__label">Pico de Alunos em Risco</div>
+        <div class="kpi-card__value">21.414</div>
+        <div class="kpi-card__detail">em 28/11/2025</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__label">Último Registro</div>
+        <div class="kpi-card__value">4.416</div>
+        <div class="kpi-card__detail">em 23/12/2025</div>
+        <div class="kpi-card__trend kpi-card__trend--down">&#9660; 79,4% desde o pico</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__label">Escolas Monitoradas</div>
+        <div class="kpi-card__value">199</div>
+        <div class="kpi-card__detail">no ponto máximo da série</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__label">Relatórios Consolidados</div>
+        <div class="kpi-card__value">11</div>
+        <div class="kpi-card__detail">cortes temporais processados</div>
+      </div>
+    </div>
+
+    <!-- Main Chart: Evolução Temporal -->
+    <div class="chart-row chart-row--full">
+      <div class="chart-card">
+        <div class="chart-card__header">
+          <div>
+            <div class="chart-card__title">Evolução Temporal — Alunos em Risco de Reprovação</div>
+            <div class="chart-card__subtitle">Total de alunos únicos com risco_reprovacao = "Sim" por data de corte</div>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="chartTemporal" height="85"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row: Escolas + Turmas -->
+    <div class="chart-row chart-row--half">
+      <div class="chart-card">
+        <div class="chart-card__header">
+          <div>
+            <div class="chart-card__title">Escolas Afetadas por Data</div>
+            <div class="chart-card__subtitle">Quantidade de escolas com ao menos 1 aluno em risco</div>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="chartEscolas" height="100"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card__header">
+          <div>
+            <div class="chart-card__title">Turmas Impactadas por Data</div>
+            <div class="chart-card__subtitle">Quantidade de turmas com alunos em situação de risco</div>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="chartTurmas" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row: Tabela + Variação -->
+    <div class="chart-row chart-row--third">
+      <div class="chart-card">
+        <div class="chart-card__header">
+          <div>
+            <div class="chart-card__title">Resumo Temporal Consolidado</div>
+            <div class="chart-card__subtitle">Dados por data de corte com variação percentual</div>
+          </div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Alunos em Risco</th>
+              <th>Escolas</th>
+              <th>Turmas</th>
+              <th>Variação</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card__header">
+          <div>
+            <div class="chart-card__title">Variação entre Cortes (%)</div>
+            <div class="chart-card__subtitle">Percentual de mudança em relação ao corte anterior</div>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="chartVariacao" height="220"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row: Média por escola -->
+    <div class="chart-row chart-row--full">
+      <div class="chart-card">
+        <div class="chart-card__header">
+          <div>
+            <div class="chart-card__title">Média de Alunos em Risco por Escola</div>
+            <div class="chart-card__subtitle">Total de alunos em risco / número de escolas afetadas, por data de corte</div>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="chartMedia" height="75"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Insight -->
+    <div class="insight-box">
+      <div class="insight-box__title">Análise</div>
+      <p>A série temporal evidencia uma tendência consistente de redução do risco de reprovação ao longo do período monitorado. O pico de <strong>21.414 alunos em risco</strong> registrado em 28/11 reduziu-se para <strong>4.416 em 23/12</strong>, representando uma queda de 79,4%. A média de alunos em risco por escola caiu de 107,6 para 49,1 no mesmo período. Essa tendência sugere efeito das intervenções pedagógicas implementadas ao longo do bimestre final, embora parte da redução possa estar associada à proximidade do encerramento do ano letivo e à resolução de situações pendentes.</p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="dash-footer">
+    Dados: SEDUC Sergipe — Relatórios de Risco de Reprovação (Nov/2025 – Jan/2026) &nbsp;|&nbsp; Processamento: Python (Pandas) &nbsp;|&nbsp; Visualização: Chart.js
+  </div>
+
+  <script>
+    /* =============================================
+       DATA — from resumo_temporal.xlsx
+       ============================================= */
+    const data = [
+      { date: '28/11', full: '28/11/2025', alunos: 21414, escolas: 199, turmas: 1875 },
+      { date: '03/12', full: '03/12/2025', alunos: 15517, escolas: 197, turmas: 1742 },
+      { date: '04/12', full: '04/12/2025', alunos: 16153, escolas: 198, turmas: 1768 },
+      { date: '05/12', full: '05/12/2025', alunos: 14900, escolas: 197, turmas: 1725 },
+      { date: '10/12', full: '10/12/2025', alunos: 14128, escolas: 197, turmas: 1692 },
+      { date: '12/12', full: '12/12/2025', alunos: 10294, escolas: 178, turmas: 1390 },
+      { date: '15/12', full: '15/12/2025', alunos: 12360, escolas: 193, turmas: 1625 },
+      { date: '17/12', full: '17/12/2025', alunos:  6809, escolas: 127, turmas:  866 },
+      { date: '19/12', full: '19/12/2025', alunos:  4820, escolas:  96, turmas:  611 },
+      { date: '23/12', full: '23/12/2025', alunos:  4416, escolas:  90, turmas:  543 },
+      { date: '06/01', full: '06/01/2026', alunos:   553, escolas:  17, turmas:   74 },
+    ];
+
+    const labels = data.map(d => d.date);
+    const alunos = data.map(d => d.alunos);
+    const escolas = data.map(d => d.escolas);
+    const turmas = data.map(d => d.turmas);
+    const media = data.map(d => Math.round((d.alunos / d.escolas) * 10) / 10);
+
+    // Variação percentual
+    const variacao = data.map((d, i) => {
+      if (i === 0) return 0;
+      return Math.round(((d.alunos - data[i-1].alunos) / data[i-1].alunos) * 1000) / 10;
+    });
+
+    /* --- Chart defaults --- */
+    Chart.defaults.font.family = "'Source Sans 3', sans-serif";
+    Chart.defaults.font.size = 13;
+    Chart.defaults.color = '#5a6578';
+
+    const gridColor = 'rgba(0,0,0,0.04)';
+    const gridBorder = 'rgba(0,0,0,0.08)';
+
+    /* =============================================
+       CHART 1 — Evolução temporal (área)
+       ============================================= */
+    new Chart(document.getElementById('chartTemporal'), {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Alunos em Risco',
+          data: alunos,
+          borderColor: '#1e3a5f',
+          backgroundColor: 'rgba(30, 58, 95, 0.08)',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#1e3a5f',
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          fill: true,
+          tension: 0.3,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#1e3a5f',
+            padding: 12,
+            titleFont: { weight: '700' },
+            callbacks: {
+              label: ctx => `${ctx.parsed.y.toLocaleString('pt-BR')} alunos em risco`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: gridColor },
+            border: { color: gridBorder },
+            ticks: {
+              callback: v => v >= 1000 ? (v/1000).toFixed(0) + 'k' : v
+            }
+          },
+          x: {
+            grid: { display: false },
+            border: { color: gridBorder }
+          }
+        }
+      }
+    });
+
+    /* =============================================
+       CHART 2 — Escolas afetadas
+       ============================================= */
+    new Chart(document.getElementById('chartEscolas'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Escolas',
+          data: escolas,
+          backgroundColor: 'rgba(30, 58, 95, 0.7)',
+          borderRadius: 4,
+          barPercentage: 0.65,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: gridColor },
+            border: { color: gridBorder },
+          },
+          x: {
+            grid: { display: false },
+            border: { color: gridBorder }
+          }
+        }
+      }
+    });
+
+    /* =============================================
+       CHART 3 — Turmas impactadas
+       ============================================= */
+    new Chart(document.getElementById('chartTurmas'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Turmas',
+          data: turmas,
+          backgroundColor: 'rgba(196, 149, 58, 0.7)',
+          borderRadius: 4,
+          barPercentage: 0.65,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: gridColor },
+            border: { color: gridBorder },
+          },
+          x: {
+            grid: { display: false },
+            border: { color: gridBorder }
+          }
+        }
+      }
+    });
+
+    /* =============================================
+       CHART 4 — Variação percentual (barras horizontais)
+       ============================================= */
+    const varLabels = labels.slice(1);
+    const varData = variacao.slice(1);
+    const varColors = varData.map(v => v < 0 ? 'rgba(56, 161, 105, 0.75)' : 'rgba(229, 62, 62, 0.75)');
+
+    new Chart(document.getElementById('chartVariacao'), {
+      type: 'bar',
+      data: {
+        labels: varLabels,
+        datasets: [{
+          label: 'Variação %',
+          data: varData,
+          backgroundColor: varColors,
+          borderRadius: 3,
+          barPercentage: 0.6,
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `${ctx.parsed.x > 0 ? '+' : ''}${ctx.parsed.x}%`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: gridColor },
+            border: { color: gridBorder },
+            ticks: { callback: v => v + '%' }
+          },
+          y: {
+            grid: { display: false },
+            border: { color: gridBorder }
+          }
+        }
+      }
+    });
+
+    /* =============================================
+       CHART 5 — Média por escola
+       ============================================= */
+    new Chart(document.getElementById('chartMedia'), {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Média por escola',
+          data: media,
+          borderColor: '#c4953a',
+          backgroundColor: 'rgba(196, 149, 58, 0.08)',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#c4953a',
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          fill: true,
+          tension: 0.3,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#c4953a',
+            padding: 12,
+            callbacks: {
+              label: ctx => `${ctx.parsed.y} alunos em risco por escola`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: { color: gridColor },
+            border: { color: gridBorder },
+          },
+          x: {
+            grid: { display: false },
+            border: { color: gridBorder }
+          }
+        }
+      }
+    });
+
+    /* =============================================
+       TABLE — Resumo consolidado
+       ============================================= */
+    const tbody = document.getElementById('tableBody');
+    data.forEach((d, i) => {
+      const pct = i === 0 ? '—' :
+        `${variacao[i] > 0 ? '+' : ''}${variacao[i]}%`;
+      const pctClass = i === 0 ? '' :
+        variacao[i] < 0 ? 'color: #38a169' : 'color: #e53e3e';
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${d.full}</strong></td>
+        <td class="number">${d.alunos.toLocaleString('pt-BR')}</td>
+        <td class="number">${d.escolas}</td>
+        <td class="number">${d.turmas.toLocaleString('pt-BR')}</td>
+        <td class="number" style="${pctClass}; font-weight: 600">${pct}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  </script>
+
+</body>
+</html>

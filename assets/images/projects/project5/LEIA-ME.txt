@@ -1,0 +1,27 @@
+PROJETO 5 — Painel de Recomposição de Aprendizagens
+===================================================
+
+Coloque as imagens na pasta com os nomes exatos abaixo.
+Cada arquivo deve corresponder ao conteúdo descrito:
+
+1.jpg = TELA DE LOGIN
+   - Painel de Recomposição — Prefeitura de Joinville
+   - Card branco com: Tipo de Acesso (dropdown), Escola, Senha
+   - Botão "Entrar"
+   - Fundo azul claro
+
+2.jpg = DASHBOARD INICIAL (PÁGINA INÍCIO)
+   - Sistema de Avaliação e Acompanhamento de Níveis de Recomposição
+   - Rede Municipal de Ensino de Joinville
+   - Seção "Sobre a Metodologia" (Nível 3 e Nível 2)
+   - 3 cards de KPI: Alunos pré-selecionados, Nível 3, Nível 2
+   - Gráficos: Defasagem por Componente (LP, MAT, Ambos)
+   - Gráficos: Distribuição por Padrão (LP e Matemática)
+
+3.jpg = NÍVEL 3 — RECOMPOSIÇÃO (LISTA DE ALUNOS)
+   - Menu lateral com "Nível 3 — Recomposição" selecionado
+   - Cards: Total Nível 3, Defasagem LP, Defasagem MAT, Defasagem Ambos
+   - Caixa amarela "Como funciona esta seção"
+   - Lista de alunos por ano/série com defasagem
+   - Busca e botão "Exportar PDF"
+   - Cards de alunos com "Ver detalhes" e dropdown "Selecionar..."

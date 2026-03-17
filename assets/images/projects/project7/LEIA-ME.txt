@@ -1,0 +1,28 @@
+PROJETO 7 — Sistema de Priorização de Escolas para o SAEB
+========================================================
+
+Coloque as imagens na pasta com os nomes exatos abaixo.
+Cada arquivo deve corresponder ao conteúdo descrito:
+
+1.jpg = DASHBOARD PRINCIPAL (LISTA UNIFICADA)
+   - Título: "Priorização de Escolas - Lista Unificada"
+   - Subtítulo: "Projeto Gestão da Aprendizagem Sergipe - SAEB 2025"
+   - Botões: Gerar Relatório Final (PDF), Exportar CSV, Ajuda
+   - Banner roxo: "Escolas Novas Aguardando Definição" (20 escolas)
+   - Cards: Total 201, Cenário 1 (96), Cenário 2 (118), Prioridade Alta (67), Prioridade Média (67)
+   - Sidebar: Lista Unificada (201 escolas), Composição, Filtros DRE, Pesos (Participação, Rendimento)
+   - Seção: Cenários de Priorização por Articuladores (Cenário 1: 8 escolas/art., Cenário 2: 10 escolas/art.)
+
+2.jpg = GRÁFICO ESCOLAS POR DRE
+   - Gráfico de barras horizontais: "Escolas por Diretoria Regional"
+   - Legenda: Total (cinza), Cenário 1 (azul), Cenário 2 (verde)
+   - Eixo Y: DEA, DRE01 a DRE09
+   - Sidebar: Lista Unificada (201), Composição, Filtros DRE (DEA e DRE08 selecionados), Pesos Participação (0.33)
+
+3.jpg = RANKING GERAL DE ESCOLAS
+   - Título: "Ranking Geral de Escolas"
+   - Dropdown "Mostrar Top 50"
+   - Tabela: #, Tipo, Escola, DRE, Tipo Ensino, Alunos, Aprovação, Prioridade, Score
+   - Sidebar: Filtros DRE, Pesos (Participação, Rendimento, Aprovação 2025 - todos 0.33)
+   - Botão "Recalcular Score"
+   - Texto: "Escolas SEM 3º ano usam apenas Aprovação"

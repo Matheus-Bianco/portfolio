@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de indicadores de risco educacional multidimensionais para mais de 200 escolas. Python, Pandas, ETL, SAEB e Looker Studio.">
+  <title>Plataforma de Indicadores de Risco Educacional — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">01</div>
+      <h1>Plataforma de Indicadores de Risco Educacional</h1>
+      <p>Avaliação de risco multidimensional para mais de 200 escolas da rede estadual de Sergipe</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Sergipe / FGV DGPE</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-users"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">200+ escolas, 10 diretorias regionais</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2025</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A Secretaria de Estado da Educação de Sergipe necessitava de uma abordagem sistemática e baseada em dados para identificar escolas e estudantes em situação de risco educacional em múltiplas dimensões — abandono, reprovação, frequência insuficiente e baixo desempenho acadêmico. Sem um sistema integrado de indicadores, as intervenções eram reativas em vez de preventivas, e a alocação de recursos carecia de critérios objetivos de priorização.</p>
+          <p>O desafio era agravado pela necessidade de integrar dados de múltiplas fontes desconectadas: o sistema estadual de gestão de alunos, avaliações nacionais (SAEB), avaliações estaduais (SAESE), plataformas diagnósticas (Plurall) e índices socioeconômicos (INSE).</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots project-screenshots--project1">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project1/1.jpg" alt="Tela de login do sistema">
+              <figcaption>Tela de login do Sistema de Monitoramento de Fluxo Escolar (FGV DGPE / SEED-Sergipe)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project1/2.jpg" alt="Painel de estatísticas gerais">
+              <figcaption>Painel de estatísticas gerais da escola com indicadores de risco (reprovação, abandono, frequência, nota e aprovados)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project1/3.jpg" alt="Gráfico de evolução temporal">
+              <figcaption>Gráfico de evolução temporal de alunos em risco de reprovação ao longo do tempo</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Projetei e construí uma plataforma integrada de indicadores de risco em Python que processa a base completa de alunos do estado (~597 MB de registros individuais) e gera indicadores compostos de risco por escola. O sistema segue um pipeline estruturado de ETL:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Extração de dados:</strong> Ingestão de arquivos brutos CSV/Excel de múltiplos sistemas educacionais com tratamento de codificação e tipos</li>
+            <li><i class="fas fa-check"></i> <strong>Limpeza e padronização:</strong> Tratamento de valores ausentes, normalização de códigos INEP, padronização de nomes de escolas e séries</li>
+            <li><i class="fas fa-check"></i> <strong>Cálculo de indicadores:</strong> Computação de percentuais de risco de abandono, reprovação, frequência, notas, distorção idade-série e participação no programa Pé de Meia por escola</li>
+            <li><i class="fas fa-check"></i> <strong>Classificação de risco:</strong> Categorização em níveis Baixo, Médio, Alto e Não Registrado</li>
+            <li><i class="fas fa-check"></i> <strong>Integração de avaliações:</strong> Cruzamento com dados de desempenho do SAEB 2023, SAESE 2024 e Plurall</li>
+            <li><i class="fas fa-check"></i> <strong>Geração de produto final:</strong> Planilha consolidada com indicadores por escola acompanhada de dicionário de dados</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Base completa de alunos (tb_dados_aluno.csv — 597 MB)</li>
+            <li><i class="fas fa-table"></i> Dados de frequência escolar (tb_dados_frequencia.csv)</li>
+            <li><i class="fas fa-table"></i> Registros de professores (tb_dados_professor.csv)</li>
+            <li><i class="fas fa-table"></i> Microdados do SAEB 2023 (INEP/MEC)</li>
+            <li><i class="fas fa-table"></i> Dados do SAESE 2024 (avaliação estadual)</li>
+            <li><i class="fas fa-table"></i> Dados de avaliação diagnóstica Plurall</li>
+            <li><i class="fas fa-table"></i> INSE 2021 — Índice Socioeconômico (INEP)</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">CSV / Excel</span>
+            <span class="tag">Pipeline de ETL</span>
+            <span class="tag">Looker Studio</span>
+            <span class="tag">Integração de Dados</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>A plataforma permitiu à Secretaria de Educação identificar objetivamente as escolas com maior concentração de estudantes em risco, direcionando o acompanhamento pedagógico às 10 Diretorias Regionais de Educação (DEA + DRE01 a DRE09). Os indicadores foram utilizados diretamente por gestores para priorização de recursos e definição de estratégias de intervenção, estabelecendo uma ferramenta sistemática de tomada de decisão baseada em evidências para a rede educacional estadual.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

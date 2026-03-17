@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel de indicadores educacionais integrando IDEB e dados do Censo Escolar para análise e monitoramento.">
+  <title>Painel de Indicadores Educacionais — IDEB &amp; Censo — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">08</div>
+      <h1>Painel de Indicadores Educacionais — IDEB &amp; Censo</h1>
+      <p>Infraestrutura de dados integrada para monitoramento da qualidade educacional</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Sergipe / FGV DGPE</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-chart-area"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">Análise de indicadores nacionais</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2024–2025</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>O monitoramento da qualidade da educação pública no Brasil baseia-se em indicadores produzidos pelo INEP (Instituto Nacional de Estudos e Pesquisas Educacionais), com destaque para o IDEB (Índice de Desenvolvimento da Educação Básica) e os dados do Censo Escolar. A equipe de gestão da SED Sergipe necessitava de uma infraestrutura de dados que consolidasse esses indicadores em um painel analítico, permitindo análises comparativas entre estados, regiões e séries históricas.</p>
+          <p>Os dados provinham de múltiplas fontes, anos e formatos — exigindo um pipeline estruturado para torná-los analiticamente úteis.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project8/1.png" alt="Rankings e indicadores SAEB">
+              <figcaption>Rankings comparativos: IDEB Nordeste e Brasil, SAEB Matemática e Português, Taxa de Aprovação por estado (2023)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project8/2.png" alt="Infraestrutura das escolas estaduais">
+              <figcaption>Infraestrutura das 201 escolas estaduais de Sergipe (Censo 2023): água, energia, esgoto, banheiro, biblioteca, laboratório, internet, quadra</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project8/3.png" alt="Recursos pedagógicos e tecnológicos por DRE">
+              <figcaption>Recursos pedagógicos e tecnológicos por DRE (%) — Biblioteca, Lab. Informática, Internet Alunos, Banda Larga, com tabela de detalhamento</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project8/4.png" alt="IDEB Ensino Médio 2005-2023">
+              <figcaption>Gestão para a Aprendizagem — IDEB Ensino Médio Estadual (2005-2023): Sergipe em destaque, evolução temporal e rankings Nordeste/Brasil</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project8/5.png" alt="Painel de suporte de dados">
+              <figcaption>Painel de Suporte de Dados — mapa de Sergipe por DRE com taxa de participação SAEB e Top 10 escolas</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Construí um repositório integrado de dados e um pipeline para indicadores de qualidade educacional:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Coleta e organização:</strong> Repositório estruturado com séries históricas do IDEB (2022–2024) e microdados do Censo Escolar 2023</li>
+            <li><i class="fas fa-check"></i> <strong>Padronização:</strong> Normalização de dados de diferentes anos e formatos, harmonizando códigos de UF, etapas de ensino e definições de indicadores</li>
+            <li><i class="fas fa-check"></i> <strong>Integração:</strong> Cruzamento entre indicadores do IDEB, dados de infraestrutura do Censo e Indicadores Compostos de Gestão (ICG) para uma visão multidimensional da qualidade educacional</li>
+            <li><i class="fas fa-check"></i> <strong>Documentação:</strong> Documentação técnica completa do pipeline de dados e definições de indicadores</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> IDEB por UF (br_inep_ideb_uf.csv) — INEP</li>
+            <li><i class="fas fa-table"></i> Indicadores Compostos de Gestão (ICG) 2022, 2023, 2024 — nível nacional, regional e estadual</li>
+            <li><i class="fas fa-table"></i> Microdados do Censo Escolar 2023 (educação básica)</li>
+            <li><i class="fas fa-table"></i> Suplemento de cursos técnicos 2023</li>
+            <li><i class="fas fa-table"></i> Dados de infraestrutura escolar do Censo</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">CSV / Excel</span>
+            <span class="tag">Pipeline de Dados</span>
+            <span class="tag">Dados INEP</span>
+            <span class="tag">Padronização de Dados</span>
+            <span class="tag">Documentação Técnica</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>A base integrada de indicadores permitiu à equipe de gestão da SED Sergipe realizar análises comparativas do desempenho educacional do estado em relação a outras unidades da federação e às metas nacionais. Os dados alimentaram painéis de monitoramento utilizados em reuniões estratégicas e subsidiaram o planejamento de ações voltadas à melhoria dos indicadores de qualidade da educação básica — fornecendo a base analítica para decisões de política educacional baseadas em evidências no nível estadual.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

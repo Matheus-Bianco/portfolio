@@ -1,0 +1,25 @@
+PROJETO 4 — Mapeamento das imagens
+==================================
+
+Coloque as imagens na pasta com os nomes exatos abaixo.
+Cada arquivo deve corresponder ao conteúdo descrito:
+
+1.jpg = TELA DE LOGIN
+   - Sistema de Agendamentos — Avaliação Diagnóstica 2026 - SEED Sergipe
+   - Página de login com campo de identificação e senha
+   - Painel informativo à esquerda com objetivos do sistema
+
+2.jpg = DASHBOARD DE AGENDAMENTOS
+   - Resumo Geral (Total de Escolas, Agendadas, Pendentes, % da Rede)
+   - Evolução dos Agendamentos (gráfico de linha com agendamentos acumulados)
+   - Navegação: Dashboard, Resultados, Upload Resultados, Administração
+
+3.jpg = DENSIDADE DE AGENDAMENTOS
+   - Tabela "Densidade de Agendamentos por Data e Turno"
+   - Colunas: Data, 1ª/2ª/3ª Série (Manhã, Tarde, Noite), Total
+   - Células coloridas: Baixa (verde), Média (amarelo), Alta
+
+4.jpg = SISTEMA DE AVALIAÇÕES (RESULTADOS)
+   - Painel com KPIs: Escolas Avaliadas, Alunos Matriculados, % Participantes, Rendimento Médio
+   - Gráficos: % Participantes LP e MAT por DRE; Média Participação x Rendimento por DRE
+   - Filtros: Período Avaliativo, Data de Referência, DRE, Série

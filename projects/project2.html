@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel interativo com mapeamento geográfico de mais de 3.900 alunos imigrantes em 170 escolas. Python, Google Apps Script, Leaflet.js.">
+  <title>Painel de Monitoramento de Estudantes Imigrantes — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">02</div>
+      <h1>Painel de Monitoramento de Estudantes Imigrantes</h1>
+      <p>Dashboard interativo geográfico e analítico para populações estudantis imigrantes</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">Secretaria de Educação de Joinville/SC</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-users"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">3.923 alunos, 170 escolas, 47 nacionalidades</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2025–2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A rede municipal de educação de Joinville atende uma população crescente de estudantes imigrantes — 3.923 alunos de 47 nacionalidades diferentes em 2026, distribuídos em mais de 170 escolas. A administração necessitava de um instrumento analítico capaz de mapear essa população, compreender sua distribuição geográfica e escolar, acompanhar o desempenho acadêmico e subsidiar políticas de acolhimento e inclusão.</p>
+          <p>Sem uma ferramenta centralizada de monitoramento, decisões sobre alocação de profissionais de apoio linguístico, programas de Português para Estrangeiros e intervenções pedagógicas específicas eram tomadas sem visibilidade completa do cenário.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project2/1.jpg" alt="Mapa interativo Alunos Migrantes Joinville 2026">
+              <figcaption>Mapa interativo com distribuição geográfica de alunos imigrantes por escola em Joinville, filtros e ranking de escolas por quantidade de migrantes</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project2/2.jpg" alt="Dashboard Total Alunos Migrantes 2026">
+              <figcaption>Dashboard Total com estatísticas agregadas (total de migrantes, escolas, nacionalidades), gráficos de distribuição por nacionalidade e sexo, e top escolas por número e percentual de migrantes</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project2/3.jpg" alt="Gráficos de distribuição demográfica">
+              <figcaption>Gráficos de distribuição por curso/grupo, turno, série/etapa (top 20) e tempo na rede</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Construí um sistema integrado em duas camadas combinando um pipeline de dados em Python com uma aplicação web interativa:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Pipeline de dados (Python):</strong> Processamento de 6 anos de registros anuais de alunos (2021–2026), identificação de imigrantes por nacionalidade (incluindo inferência a partir da nacionalidade dos pais), deduplicação por código de pessoa e geração de 18+ arquivos CSV analíticos</li>
+            <li><i class="fas fa-check"></i> <strong>Mapeamento geográfico:</strong> Mapa interativo construído com Leaflet.js mostrando a distribuição de alunos em todas as 170 escolas com coordenadas geográficas</li>
+            <li><i class="fas fa-check"></i> <strong>Dashboard analítico:</strong> 10+ gráficos interativos cobrindo distribuição por nacionalidade, gênero, curso, turno, etapa de ensino e tempo na rede</li>
+            <li><i class="fas fa-check"></i> <strong>Acompanhamento de programas:</strong> Integração com dados do programa Innovamat de matemática (278 participantes imigrantes)</li>
+            <li><i class="fas fa-check"></i> <strong>Relatórios:</strong> Geração automatizada de relatórios PDF por escola com informações detalhadas dos alunos</li>
+            <li><i class="fas fa-check"></i> <strong>Análise histórica:</strong> Acompanhamento da evolução de matrículas de imigrantes ao longo de 6 anos (2021–2026)</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Registros anuais de alunos 2021–2026 (65–70 campos por registro, ~14–22 MB/ano)</li>
+            <li><i class="fas fa-table"></i> Coordenadas geográficas de todas as 170 escolas</li>
+            <li><i class="fas fa-table"></i> Dados de avaliações somativas (2024, 2025)</li>
+            <li><i class="fas fa-table"></i> Dados de participação no programa Innovamat</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">gspread</span>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">Leaflet.js</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">HTML / CSS / JS</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O painel tornou-se uma ferramenta central para a formulação de políticas de acolhimento e inclusão de estudantes imigrantes. Revelou padrões importantes — como a predominância de venezuelanos (2.965 alunos) e haitianos (259) — e possibilitou o monitoramento da evolução de matrículas ao longo de seis anos. Os dados subsidiaram diretamente decisões sobre alocação de profissionais de apoio linguístico, direcionamento do programa de Português para Estrangeiros e planejamento de ações pedagógicas específicas. Dado relevante: 3.239 estudantes hispanófonos identificados, viabilizando programas direcionados de apoio linguístico.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

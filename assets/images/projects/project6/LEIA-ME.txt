@@ -1,0 +1,22 @@
+PROJETO 6 — Sistema de Monitoramento Temporal de Risco
+========================================================
+
+Coloque as 3 imagens na pasta com os nomes exatos abaixo (1.png a 3.png).
+Cada arquivo deve corresponder ao conteúdo descrito (a legenda no site sincroniza pelo número).
+
+1.png = MÉDIA DE ALUNOS EM RISCO POR ESCOLA
+   - Gráfico de linha: "Média de Alunos em Risco por Escola"
+   - Eixo X: datas (28/11 a 06/01)
+   - Eixo Y: média de alunos em risco por escola (0–120)
+   - Seção "ANÁLISE" abaixo com texto sobre redução do risco (21.414 → 4.416, queda 79,4%)
+   - Rodapé: SEDUC Sergipe — Relatórios de Risco (Nov/2025 - Jan/2026), Python (Pandas), Chart.js
+
+2.png = DASHBOARD CONSOLIDADO (4 PAINÉIS)
+   - Topo: "Escolas Afetadas por Data" (gráfico de barras) e "Turmas Impactadas por Data" (gráfico de barras)
+   - Base: "Resumo Temporal Consolidado" (tabela com DATA, ALUNOS EM RISCO, ESCOLAS, TURMAS, VARIAÇÃO)
+   - Base: "Variação entre Cortes (%)" (gráfico de barras divergentes, verde/vermelho)
+
+3.png = MONITORAMENTO TEMPORAL — ALUNOS EM RISCO
+   - Título: "Monitoramento Temporal — Alunos em Risco de Reprovação"
+   - Cards: Pico de Alunos (21.414), Último Registro (4.416, ▼ 79,4%), Escolas Monitoradas (199), Relatórios Consolidados (11)
+   - Gráfico de linha: "Evolução Temporal — Alunos em Risco de Reprovação" (28/11 a 06/01)

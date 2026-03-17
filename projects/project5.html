@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel de acompanhamento da recomposição de aprendizagens e programas de recuperação educacional.">
+  <title>Painel de Recomposição de Aprendizagens — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">05</div>
+      <h1>Painel de Recomposição de Aprendizagens</h1>
+      <p>Monitoramento de participação e progresso no programa de recuperação de aprendizagens</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">Secretaria de Educação de Joinville/SC</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-book"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">Programa de recomposição de aprendizagens</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A partir de avaliações diagnósticas e somativas que revelaram lacunas significativas de aprendizagem, a Secretaria de Educação de Joinville implementou um programa de recomposição de aprendizagens destinado a estudantes com defasagens acadêmicas expressivas. A gestão desse programa demandava um painel de monitoramento capaz de acompanhar a participação dos alunos, medir o progresso nas atividades de recuperação e gerar relatórios acionáveis para gestores escolares.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project5/1.jpg" alt="Tela de login do Painel de Recomposição">
+              <figcaption>Tela de login do Painel de Recomposição — Prefeitura de Joinville (seleção de tipo de acesso e escola)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project5/2.jpg" alt="Dashboard inicial do sistema">
+              <figcaption>Dashboard inicial: metodologia dos níveis de recomposição (Nível 3 e Nível 2), KPIs da escola e gráficos de defasagem por componente e distribuição por padrão de desempenho</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project5/3.jpg" alt="Lista de alunos Nível 3">
+              <figcaption>Nível 3 — Recomposição: lista de alunos com defasagem em LP e/ou Matemática, ordenados por prioridade, com classificação Alfabetizado/Não Alfabetizado e exportação em PDF</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Construí um dashboard de gestão web com os seguintes componentes:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Backend (Google Apps Script):</strong> Servidor com camada de serviço de dados (DataService.js) para todas as operações de dados e lógica de negócio (Code.js)</li>
+            <li><i class="fas fa-check"></i> <strong>Interface web responsiva:</strong> Sistema de login, navegação por sidebar, dashboard com KPIs, busca e filtragem de alunos, e diálogos modais para visualizações detalhadas</li>
+            <li><i class="fas fa-check"></i> <strong>Pré-processamento de dados:</strong> Script Node.js (preprocessar.js) para parsing de CSVs e preparação de dados via Google APIs</li>
+            <li><i class="fas fa-check"></i> <strong>Geração de relatórios PDF:</strong> Integração com jsPDF e jspdf-autotable para geração automatizada de relatórios com tabelas formatadas, exportáveis por escola</li>
+            <li><i class="fas fa-check"></i> <strong>Acompanhamento de progresso:</strong> Gestão de atividades com monitoramento de participação e visualização de progresso individual do aluno</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Registros de alunos identificados para recomposição</li>
+            <li><i class="fas fa-table"></i> Dados de atividades e acompanhamento de progresso</li>
+            <li><i class="fas fa-table"></i> Registros de desempenho acadêmico</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Google APIs</span>
+            <span class="tag">CSV</span>
+            <span class="tag">jsPDF</span>
+            <span class="tag">HTML5 / CSS3</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O dashboard forneceu à equipe gestora da Secretaria de Educação uma visão integrada do programa de recomposição, viabilizando o monitoramento em tempo real da participação dos estudantes e do progresso das atividades de recuperação. A geração automatizada de relatórios PDF simplificou a comunicação com as equipes escolares e apoiou o acompanhamento individualizado dos alunos em recomposição, contribuindo para a efetividade das ações de recuperação de aprendizagens da rede municipal.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
