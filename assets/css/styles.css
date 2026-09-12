@@ -556,8 +556,8 @@ ul {
 }
 
 .projects-grid--featured .project-card__tags {
-  gap: 6px;
-  margin-bottom: 12px;
+  gap: 4px;
+  margin-bottom: 10px;
 }
 
 .projects-grid--featured .project-card__image .project-number,
@@ -650,18 +650,22 @@ ul {
 
 .project-card__tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  gap: 4px;
+  margin-bottom: 12px;
+  overflow: hidden;
 }
 
 .tag {
   background: var(--accent);
   color: var(--text-light);
-  padding: 5px 12px;
+  padding: 2px 7px;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: 0.62rem;
   font-weight: 600;
+  line-height: 1.35;
+  white-space: nowrap;
+  flex-shrink: 1;
 }
 
 .project-card__buttons a {
