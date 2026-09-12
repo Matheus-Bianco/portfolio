@@ -74,7 +74,9 @@ git push -u origin main
 │   ├── project5.html   # Learning Recovery Monitoring Dashboard
 │   ├── project6.html   # Temporal Risk Monitoring System
 │   ├── project7.html   # School Prioritization System for SAEB
-│   └── project8.html   # Educational Indicators Panel (IDEB & Census)
+│   ├── project8.html   # Educational Indicators Panel (IDEB & Census)
+│   ├── project9.html   # Strategic Monitoring — Joinville
+│   └── project10.html  # Educational Indicators Panel — SEDUC-RS / UNESCO
 └── README.md
 ```
 

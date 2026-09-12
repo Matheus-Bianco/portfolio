@@ -35,7 +35,9 @@ assets/
         ├── project5/    ← Painel de Recomposição
         ├── project6/    ← Monitoramento Temporal de Risco
         ├── project7/    ← Priorização SAEB
-        └── project8/    ← Painel IDEB & Censo
+        ├── project8/    ← Painel IDEB & Censo
+        ├── project9/    ← Monitoramento Estratégico Joinville
+        └── project10/   ← Painel Indicadores SEDUC-RS / UNESCO
 ```
 
 **As pastas `project1` a `project8` já existem.** Basta colocar as imagens dentro delas.

@@ -1,12 +1,12 @@
 # Contexto e Progresso — Portfólio Matheus Bianco
 
-**Última atualização:** Março 2026
+**Última atualização:** setembro 2026
 
 ---
 
 ## Objetivo
 
-Portfólio profissional para o **Processo Seletivo UNESCO — Edital nº 03/2026** (Projeto 914BRZ1153 — Fortalecimento da Gestão Educacional do Estado do Rio Grande do Sul). O material é utilizado para verificação de experiências, competências técnicas e aderência aos requisitos do Edital.
+Portfólio profissional de projetos em dados, sistemas e políticas públicas educacionais. Serve à verificação de experiências e competências técnicas em processos seletivos (UNESCO/SEDUC-RS, PNUD/Consórcio Nordeste e outros). Não apresenta candidaturas em curso como projeto entregue.
 
 ---
 
@@ -20,19 +20,19 @@ Portfólio profissional para o **Processo Seletivo UNESCO — Edital nº 03/2026
 | **Template PDF** | `portfolio-report.html` |
 
 ### Páginas principais
-- `index.html` — Início
+- `index.html` — Início (escopo ~2.660 escolas / ~820 mil matrículas)
 - `about.html` — Sobre Mim
-- `skills.html` — Competências
+- `skills.html` — Competências (inclui IBGE, APIs oficiais, dados territoriais)
 - `projects.html` — Grid de projetos
-- `projects/project1.html` a `project9.html` — Detalhes de cada projeto
+- `projects/project1.html` a `project10.html` — Detalhes de cada projeto
 - `contact.html` — Contato
 
 ---
 
-## Projetos (9)
+## Projetos (10)
 
 1. **Plataforma de Indicadores de Risco Educacional** — SED Sergipe/FGV
-2. **Painel de Monitoramento de Estudantes Imigrantes** — Joinville
+2. **Painel de Monitoramento de Estudantes Imigrantes** — Joinville / BID
 3. **Sistema de Acompanhamento de Dados GA/SE** — SED Sergipe/FGV
 4. **Sistema de Gestão de Avaliações Diagnósticas** — SED Sergipe/FGV
 5. **Painel de Recomposição de Aprendizagens** — Joinville
@@ -40,6 +40,11 @@ Portfólio profissional para o **Processo Seletivo UNESCO — Edital nº 03/2026
 7. **Sistema de Priorização de Escolas para o SAEB** — SED Sergipe/FGV
 8. **Painel de Indicadores Educacionais — IDEB & Censo** — SED Sergipe/FGV
 9. **Sistema de Monitoramento Estratégico SED Joinville** — Joinville (PEI 2025-2029)
+10. **Painel de Indicadores Educacionais — SEDUC-RS** — UNESCO / SEDUC-RS (Produto 4)
+
+### Escopo agregado (home)
+- **~2.660 escolas:** 2.294 RS + 202 Sergipe + 166 Joinville
+- **~820 mil matrículas:** 654 mil RS + 90 mil Sergipe + 79 mil Joinville
 
 ---
 
@@ -68,16 +73,13 @@ npm run generate-pdf   # Gera portfolio-relatorio.pdf
 
 ---
 
-## Requisitos do Edital 03/2026 (referência)
+## Prints do Projeto 10
 
-- **Formação:** Estatística, Economia, Ciência de Dados, Engenharia, Computação, Políticas Públicas ou correlatas
-- **Experiência:** 3+ anos em dashboards de políticas públicas (preferencialmente educacional); 3+ anos em avaliação de políticas educacionais; 1+ ano com bases educacionais (Censo, SAEB, registros administrativos)
-- **Produtos esperados:** 7 painéis (Todo Jovem na Escola, Atendimento, Metas e Resultados, Indicadores Educacionais, Proteção à Trajetória, Integridade/Clima, Pé-de-Meia RS)
+Substituir os placeholders em `assets/images/projects/project10/` (1.jpg a 4.jpg) pelos prints reais do painel da SEDUC-RS.
 
 ---
 
 ## Arquivos de referência (Trabalhos)
 
-- `Edital PF - ToR 03_2026 (2).pdf`
-- `TR 032026 - Analista de Dados (sem valor) (4).pdf`
-- `PORTFOLIO_UNESCO_Edital_03_2026.md` — Versão expandida em Markdown
+- Pasta `06. UNESCO/04. Produto 4_Indicadores Educacionais/`
+- `01. Editais/PNUD-TR-21-2026/` — materiais da candidatura TR 21/2026 (não versionar dados pessoais)

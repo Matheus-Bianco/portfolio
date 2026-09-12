@@ -63,11 +63,35 @@ async function generatePdf() {
     await page.goto(REPORT_URL, { waitUntil: 'networkidle0', timeout: 15000 });
     await new Promise((r) => setTimeout(r, 500));
 
+    // Preenche números de página no sumário (posições estimadas para o layout do PDF)
+    await page.evaluate(() => {
+      const COVER_HEIGHT = 1123; // altura da capa (100vh no viewport)
+      const PAGE_HEIGHT = 1000;  // altura útil por página (A4 com margens)
+      const targets = ['sobre', 'competencias', 'projetos', 'contato'];
+      targets.forEach((id) => {
+        const el = document.getElementById(id);
+        const span = document.querySelector(`.toc-page[data-target="${id}"]`);
+        if (el && span) {
+          const rect = el.getBoundingClientRect();
+          const top = rect.top + window.scrollY;
+          const pageNum = top < COVER_HEIGHT ? 1 : 2 + Math.floor((top - COVER_HEIGHT) / PAGE_HEIGHT);
+          span.textContent = pageNum;
+        }
+      });
+    });
+
     await page.pdf({
       path: outputPath,
       format: 'A4',
       printBackground: true,
       margin: { top: '15mm', right: '12mm', bottom: '15mm', left: '12mm' },
+      displayHeaderFooter: true,
+      footerTemplate: `
+        <div style="font-size:9pt; color:#5a6578; text-align:center; width:100%; font-family:'Source Sans 3',sans-serif;">
+          <span class="pageNumber"></span> / <span class="totalPages"></span>
+        </div>
+      `,
+      headerTemplate: '<div></div>',
     });
 
     console.log(`\nPDF gerado com sucesso: ${outputPath}`);

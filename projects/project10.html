@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel de Indicadores Educacionais da SEDUC-RS: infraestrutura territorial de dados oficiais (Censo, fluxo, SAEB/IDEB) para 497 municípios.">
+  <title>Painel de Indicadores Educacionais — SEDUC-RS / UNESCO — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">10</div>
+      <h1>Painel de Indicadores Educacionais — SEDUC-RS</h1>
+      <p>Infraestrutura territorial de dados oficiais para a rede estadual do Rio Grande do Sul</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">UNESCO / SEDUC-RS</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-map"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">497 municípios, ~2.294 escolas, ~654 mil matrículas</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A Secretaria da Educação do Rio Grande do Sul precisava de um instrumento único para monitorar a rede estadual com fontes oficiais — Censo Escolar, fluxo e rendimento, distorção idade-série, SAEB/IDEB e avaliações estaduais — desagregado por Coordenadoria Regional de Educação, município e escola, em 497 municípios.</p>
+          <p>Os microdados do INEP chegam em layouts que mudam de ano para ano, com recortes territoriais e dicionários distintos. Sem uma arquitetura comum (território, indicador, período) e uma interface estável, a gestão não compara séries, não cruza desigualdades e não comunica o diagnóstico para as CREs e as escolas.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project10/1.jpg" alt="Visão inicial do Painel de Indicadores Educacionais da SEDUC-RS">
+              <figcaption>Hub do painel: acesso às seções de matrículas, infraestrutura, docência, fluxo, SAEB/IDEB e visão por escola</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project10/2.jpg" alt="Mapa territorial e indicadores de acesso e matrículas">
+              <figcaption>Acesso e matrículas: série histórica, recortes por etapa e perfil, e mapa coroplético municipal</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project10/3.jpg" alt="Fluxo, rendimento e avaliações em larga escala">
+              <figcaption>Fluxo, rendimento, TDI e SAEB/IDEB com filtros por ano, CRE e município</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project10/4.jpg" alt="Visão por escola no mapa da rede estadual">
+              <figcaption>Visão por escola: busca e mapa georreferenciado com indicadores consolidados da unidade</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>No contrato UNESCO ED00585/2026 (Produto 4), concebi a cadeia completa — da fonte oficial à interface usada pelo gestor:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Diagnóstico de fontes:</strong> microdados do Censo Escolar (2019–2025), rendimento e TDI, SAEB e IDEB, com regras de leitura para layouts que mudam ao longo da série</li>
+            <li><i class="fas fa-check"></i> <strong>Arquitetura territorial:</strong> estado, 30 CREs, 497 municípios e escola, com GeoJSON e tabela de correspondência CRE–município</li>
+            <li><i class="fas fa-check"></i> <strong>Pipeline de ETL em Python:</strong> extração, limpeza, consolidação por recorte e geração de JSON/planilhas consumidos pelo painel, com scripts documentados para atualização anual</li>
+            <li><i class="fas fa-check"></i> <strong>Interface:</strong> aplicação web estática (HTML/JS/CSS, Chart.js e Leaflet) com filtros globais de ano, CRE e município; mapas; gráficos com rótulos; tabelas ordenáveis; e exportação</li>
+            <li><i class="fas fa-check"></i> <strong>Seções analíticas:</strong> acesso e matrículas, infraestrutura, complexidade de gestão (ICG), INSE, docência e AFD, fluxo e rendimento, TDI, SAERS, desigualdades, SAEB, IDEB e visão por escola</li>
+            <li><i class="fas fa-check"></i> <strong>Uso institucional:</strong> manuais de hospedagem (GitHub Pages / CNAME da SEDUC) e de manutenção do ETL para a equipe de TI e de dados</li>
+          </ul>
+          <p>No mesmo contrato, prototipei o Sistema de Gestão e Governança (Produto 2), voltado ao acompanhamento de processos e indicadores de gestão da rede.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Microdados do Censo Escolar (INEP) — matrículas, infraestrutura, docentes</li>
+            <li><i class="fas fa-table"></i> Taxas de rendimento e TDI (INEP)</li>
+            <li><i class="fas fa-table"></i> SAEB e IDEB (INEP)</li>
+            <li><i class="fas fa-table"></i> SAERS (avaliação estadual)</li>
+            <li><i class="fas fa-table"></i> Geometrias de municípios e CREs do Rio Grande do Sul</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">ETL</span>
+            <span class="tag">INEP / Censo</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">Leaflet.js</span>
+            <span class="tag">GeoJSON</span>
+            <span class="tag">HTML / CSS / JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O painel passou a oferecer à SEDUC-RS uma leitura territorial única da rede estadual — 497 municípios, cerca de 2.294 escolas e 654 mil matrículas — com séries históricas, comparações e recortes de desigualdade a partir de fontes oficiais. Gestores e equipes técnicas consultam o mesmo indicador no estado, na CRE, no município e na escola, com documentação para a TI republicar e atualizar os dados. O desenho (fonte oficial, catálogo territorial, pipeline e interface) é o mesmo tipo de infraestrutura que um observatório regional exige na primeira fase.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

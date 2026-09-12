@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Script para redimensionar imagens do portfólio",
   "scripts": {
-    "resize-images": "node scripts/resize-images.js"
+    "resize-images": "node scripts/resize-images.js",
+    "generate-pdf": "node scripts/generate-pdf-report.js"
   },
   "devDependencies": {
+    "express": "^5.2.1",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.39.1",
     "sharp": "^0.33.5"
   }
 }

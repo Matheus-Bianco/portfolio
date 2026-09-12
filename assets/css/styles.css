@@ -575,6 +575,14 @@ ul {
   color: var(--text);
 }
 
+.project-card__meta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+  margin: 0 0 6px;
+}
+
 .project-card__body p {
   font-size: 0.9rem;
   color: var(--text-light);
@@ -632,6 +640,8 @@ ul {
 .project-card:nth-child(6) .project-card__image { background: linear-gradient(135deg, #44337a, #553c9a); }
 .project-card:nth-child(7) .project-card__image { background: linear-gradient(135deg, #276749, #2f855a); }
 .project-card:nth-child(8) .project-card__image { background: linear-gradient(135deg, #1a365d, #2b6cb0); }
+.project-card:nth-child(9) .project-card__image { background: linear-gradient(135deg, #2d1b4e, #1f3661); }
+.project-card:nth-child(10) .project-card__image { background: linear-gradient(135deg, #1a365d, #c4953a); }
 
 /* --- Project Detail Page --- */
 .project-hero {
@@ -1363,30 +1373,83 @@ ul {
   }
 }
 
-/* --- Print --- */
+/* --- Print (PDF e impressão) --- */
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
   .navbar,
   .footer,
-  .navbar__toggle {
+  .navbar__toggle,
+  .page-header__actions,
+  .project-card__buttons,
+  .about__buttons,
+  .back-link,
+  .section__cta {
     display: none !important;
   }
 
   .page-header,
   .project-hero {
-    margin-top: 0;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    margin-top: 0 !important;
+    padding: 32px 0 40px !important;
+    break-after: avoid;
+  }
+
+  .page-header--home {
+    padding: 40px 0 48px !important;
+  }
+
+  .stats-bar {
+    break-inside: avoid;
+    padding: 28px 0;
+  }
+
+  .section {
+    padding: 40px 0 !important;
+    break-inside: avoid;
+  }
+
+  .project-card,
+  .skill-card,
+  .project-meta-card,
+  .project-section,
+  .project-screenshot,
+  .stat-group,
+  .about__qa-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .project-screenshots {
+    break-inside: avoid;
+  }
+
+  .project-screenshot img {
+    max-height: 500px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .project-card:hover,
+  .skill-card:hover {
+    transform: none !important;
+    box-shadow: var(--shadow) !important;
   }
 
   .hero {
     margin-top: 0;
     min-height: auto;
-    padding: 60px 0;
+    padding: 48px 0;
   }
 
-  .project-card:hover,
-  .skill-card:hover {
-    transform: none;
-    box-shadow: none;
+  a[href]::after {
+    content: none !important;
   }
 }

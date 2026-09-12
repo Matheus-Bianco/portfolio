@@ -1,6 +1,9 @@
 # Dependências
 node_modules/
 
+# PDF gerado (execute npm run generate-pdf para recriar)
+portfolio-relatorio.pdf
+
 # Sistema
 .DS_Store
 Thumbs.db
@@ -11,3 +14,6 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Editais e candidaturas (dados pessoais / PDFs de TR)
+01. Editais/
