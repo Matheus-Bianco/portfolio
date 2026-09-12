@@ -6,7 +6,7 @@
 
 ## Objetivo
 
-Portfólio profissional de projetos em dados, sistemas e políticas públicas educacionais. Serve à verificação de experiências e competências técnicas em processos seletivos (UNESCO/SEDUC-RS, PNUD/Consórcio Nordeste e outros). Destaca a atuação no Nordeste: Prefeitura de São Luís/MA e governo estadual de Sergipe (FGV). Não apresenta candidaturas em curso como projeto entregue.
+Portfólio profissional de projetos em dados, sistemas e políticas públicas educacionais. Serve à verificação de experiências e competências técnicas em processos seletivos. Não apresenta candidaturas em curso como projeto entregue.
 
 ---
 
@@ -49,7 +49,7 @@ Portfólio profissional de projetos em dados, sistemas e políticas públicas ed
 15. **Força Tarefa Prefeita** — processos licitatórios
 16. **Auxiliares pedagógicos** — solicitações NEE
 
-Ordem de exibição no site (cards 01–16) prioriza território, Nordeste e georreferenciamento para o TR 21/2026.
+Ordem de exibição no site (cards 01–17) prioriza território e georreferenciamento.
 
 ### Escopo agregado (home)
 - **~2.660 escolas:** 2.294 RS + 202 Sergipe + 166 Joinville

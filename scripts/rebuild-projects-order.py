@@ -19,7 +19,7 @@ CARDS = [
      "Comparações de IDEB, SAEB e aprovação de Sergipe frente às demais unidades da federação e ao Brasil.",
      ["Python", "Dados INEP", "IDEB", "Pipeline de Dados"]),
     ("project12", "04", "fa-map", "assets/images/projects/project12/1.png", "Mapa de fármacos em São Luís",
-     "USP/ESALQ · São Luís/MA · Nordeste", "Gestão de fármacos em São Luís — ciência de dados e território",
+     "USP/ESALQ · São Luís/MA", "Gestão de fármacos em São Luís — ciência de dados e território",
      "TCC com mapa Folium, Censo IBGE e 23 mil registros administrativos da rede municipal.",
      ["Python", "Folium", "IBGE / Censo", "Streamlit"]),
     ("project13", "05", "fa-hard-hat", "assets/images/projects/project13/1.jpg", "Mapa de obras escolares de Joinville",
