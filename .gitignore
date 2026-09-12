@@ -17,3 +17,9 @@ Thumbs.db
 
 # Editais e candidaturas (dados pessoais / PDFs de TR)
 01. Editais/
+
+# Cópia local de trabalho — o site publicado fica na raiz (GitHub Pages)
+02. Portfólio_Github/
+
+# Script local de captura (URL e credencial de homologação)
+scripts/capture-project17.js

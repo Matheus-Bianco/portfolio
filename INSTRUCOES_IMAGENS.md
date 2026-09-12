@@ -38,7 +38,8 @@ assets/
         ├── project8/    ← Painel IDEB & Censo
         ├── project9/    ← Monitoramento Estratégico Joinville
         ├── project10/   ← Painel Indicadores SEDUC-RS / UNESCO
-        └── project11/   ← Painel Dados Abertos Joinville
+        ├── project11/   ← Painel Dados Abertos Joinville
+        └── project12/   ← TCC USP/ESALQ — fármacos São Luís (mapas do Word)
 ```
 
 **As pastas `project1` a `project8` já existem.** Basta colocar as imagens dentro delas.

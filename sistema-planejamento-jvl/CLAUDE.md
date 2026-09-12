@@ -13,3 +13,16 @@
 - `doPost()` habilitado com 19 endpoints.
 - Autenticacao por API Key configurada em `API_CONFIG.API_KEY`.
 - Funcao `testarAPI()` disponivel para validar endpoints no editor do Apps Script.
+
+---
+
+## Regras Universais do Matheus
+
+### Idioma e comunicação
+- Falar sempre em **português BR**
+- Quando Matheus escrever em inglês: ativar modo prática, responder em inglês, corrigir erros com seção "✏️ Grammar Note"
+
+### Workflow
+- **NÃO** abrir browser para verificar deploys ou testar resultados visuais
+- `clasp push --force`, deploy em comando separado
+- Views DEVEM ficar DENTRO do div `.main`

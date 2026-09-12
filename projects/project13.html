@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel territorial de obras, licitações, projetos e terrenos da infraestrutura escolar de Joinville, com Leaflet e bairros oficiais da PMJ.">
+  <title>Painel de Obras e Infraestrutura Escolar — Joinville — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">05</div>
+      <h1>Painel de Obras, Licitações e Terrenos — SED/UIN Joinville</h1>
+      <p>Sistema territorial de infraestrutura escolar: mapa Leaflet, bairros oficiais da PMJ e pins georreferenciados</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Joinville / UIN</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-map-marked-alt"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">18 obras · mapa satélite · medição vs meta</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A Unidade de Infraestrutura da SED precisava acompanhar, no mesmo instrumento, obras em execução, licitações, projetos, terrenos do Plano de Expansão e reformas elétricas — e ver isso no território do município, não só em planilha. A prefeita e a equipe operacional usam visões distintas do mesmo cadastro.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Interface</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project13/1.jpg" alt="Mapa satélite do Painel de Obras com pins georreferenciados em Joinville">
+              <figcaption>Mapa satélite (Leaflet) com pins por status, lista de obras, filtros e camada de limite territorial — visão usada pela Prefeita e pela UIN</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project13/2.png" alt="Medição de obras versus meta mensal no Painel de Obras">
+              <figcaption>Medição versus meta: 18 obras, média ponderada 62,8%, 11 no prazo e 7 atrasadas, com orçamento total e executado</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Concebi e implementei o painel web (Google Apps Script + Leaflet): satélite e ruas, polígonos de bairros, pins por obra/licitação/projeto/terreno, filtros sincronizados com gráficos e esteiras que ligam terreno → projeto → licitação → obra. Coordenadas entram por ETL em Python (escolas, INEP e carga do Plano de Expansão 2025–2030).</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Georreferenciamento:</strong> latitude/longitude por entidade; só entra no mapa quem tem coordenada validável</li>
+            <li><i class="fas fa-check"></i> <strong>Território oficial:</strong> bairros da Prefeitura (SEPUD-GEO); shapefiles de município, subprefeituras e perímetro urbano como referência</li>
+            <li><i class="fas fa-check"></i> <strong>Gestão:</strong> medição mensal vs meta, cronograma financeiro e visão executiva para a Prefeita</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Leaflet.js</span>
+            <span class="tag">GeoJSON</span>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Python</span>
+            <span class="tag">Chart.js</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>A infraestrutura escolar deixou de ser uma coleção de planilhas e passou a ter leitura territorial única — obras, licitações e terrenos no mapa de Joinville, com esteira de processo e medição contra meta. É o mesmo ofício de um observatório: fonte operacional, recorte geográfico e interface para o gestor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Matheus Bianco — Dados, sistemas e soluções tecnológicas para gestão</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@
 
 ## Objetivo
 
-Portfólio profissional de projetos em dados, sistemas e políticas públicas educacionais. Serve à verificação de experiências e competências técnicas em processos seletivos (UNESCO/SEDUC-RS, PNUD/Consórcio Nordeste e outros). Não apresenta candidaturas em curso como projeto entregue.
+Portfólio profissional de projetos em dados, sistemas e políticas públicas educacionais. Serve à verificação de experiências e competências técnicas em processos seletivos (UNESCO/SEDUC-RS, PNUD/Consórcio Nordeste e outros). Destaca a atuação no Nordeste: Prefeitura de São Luís/MA e governo estadual de Sergipe (FGV). Não apresenta candidaturas em curso como projeto entregue.
 
 ---
 
@@ -24,12 +24,12 @@ Portfólio profissional de projetos em dados, sistemas e políticas públicas ed
 - `about.html` — Sobre Mim
 - `skills.html` — Competências (inclui IBGE, APIs oficiais, dados territoriais)
 - `projects.html` — Grid de projetos
-- `projects/project1.html` a `project11.html` — Detalhes de cada projeto
+- `projects/project1.html` a `project12.html` — Detalhes de cada projeto
 - `contact.html` — Contato
 
 ---
 
-## Projetos (11)
+## Projetos (16, ordem PNUD)
 
 1. **Plataforma de Indicadores de Risco Educacional** — SED Sergipe/FGV
 2. **Painel de Monitoramento de Estudantes Imigrantes** — Joinville / BID
@@ -41,7 +41,15 @@ Portfólio profissional de projetos em dados, sistemas e políticas públicas ed
 8. **Painel de Indicadores Educacionais — IDEB & Censo** — SED Sergipe/FGV
 9. **Sistema de Monitoramento Estratégico SED Joinville** — Joinville (PEI 2025-2029)
 10. **Painel de Indicadores Educacionais — SEDUC-RS** — UNESCO / SEDUC-RS (Produto 4)
+10b. **Painel de Governança da Educação** — UNESCO / SEDUC-RS (Produto 2; arquivo `project17.html`)
 11. **Painel de Dados Abertos — Educação Joinville** — SME Joinville (IBGE + INEP)
+12. **Gestão de fármacos em São Luís — ciência de dados e território** — TCC USP/ESALQ (mapa Folium + IBGE; resumo na Revista E&S)
+13. **Painel de Obras / Infra** — SED/UIN Joinville (Leaflet + bairros PMJ)
+14. **Gestão contrato BID / Plano de Expansão** — Joinville
+15. **Força Tarefa Prefeita** — processos licitatórios
+16. **Auxiliares pedagógicos** — solicitações NEE
+
+Ordem de exibição no site (cards 01–16) prioriza território, Nordeste e georreferenciamento para o TR 21/2026.
 
 ### Escopo agregado (home)
 - **~2.660 escolas:** 2.294 RS + 202 Sergipe + 166 Joinville

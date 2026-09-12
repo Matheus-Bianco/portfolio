@@ -66,19 +66,19 @@
     <h1 class="cover-title">Portfólio de Projetos</h1>
     <div class="cover-line"></div>
     <p class="cover-subtitle">Matheus Bianco</p>
-    <p class="cover-subtitle">Consultor em Dados, Sistemas e Migrações</p>
+    <p class="cover-subtitle">Consultor em Dados, Sistemas e Análises de Políticas Públicas</p>
     <p class="cover-date" id="cover-date"></p>
   </section>
 
   <section class="intro">
     <p class="portfolio-link">Para ver mais detalhes dos projetos e do portfólio completo, acesse: <a href="https://matheus-bianco.github.io/portfolio/">https://matheus-bianco.github.io/portfolio/</a></p>
     <h1>Matheus Bianco</h1>
-    <p class="subtitle">Consultor em Dados, Sistemas e Análises de Políticas Públicas Educacionais</p>
-    <p>Especialista em transformar fontes oficiais em infraestrutura de dados territoriais: construo plataformas analíticas, painéis e pipelines que apoiam secretarias de educação e organismos internacionais na tomada de decisão baseada em evidências.</p>
-    <p class="scope-context">Atua em quatro frentes — UNESCO (SEDUC-RS), FGV (SED Sergipe), BID e Secretaria Municipal de Joinville — com o seguinte escopo de abrangência:</p>
+    <p class="subtitle">Consultor em Dados, Sistemas e Análises de Políticas Públicas. Foco em políticas educacionais e desenvolvimento de soluções tecnológicas para gestão.</p>
+    <p>Infraestrutura de dados territoriais, painéis e sistemas de monitoramento a partir de fontes oficiais — para secretarias, governos e organismos internacionais.</p>
+    <p class="scope-context">Atua em quatro frentes — UNESCO (SEDUC-RS), FGV junto à SED Sergipe (governo estadual do Nordeste), BID e Secretaria Municipal de Joinville — além da trajetória na Prefeitura de São Luís/MA. Escopo de abrangência das frentes educacionais atuais:</p>
     <div class="stats">
-      <div class="stats-item"><strong>2.660</strong> Unidades Escolares <span>(2.294 RS · 202 Sergipe · 166 Joinville)</span></div>
-      <div class="stats-item"><strong>820 mil</strong> Matrículas <span>(654 mil RS · 90 mil Sergipe · 79 mil Joinville)</span></div>
+      <div class="stats-item"><strong>2.660</strong> Unidades Escolares <span>(2.294 RS · 202 Sergipe / Nordeste · 166 Joinville)</span></div>
+      <div class="stats-item"><strong>820 mil</strong> Matrículas <span>(654 mil RS · 90 mil Sergipe / Nordeste · 79 mil Joinville)</span></div>
     </div>
   </section>
 
@@ -101,7 +101,9 @@
   <p>Consultor de Dados e Sistemas da UNESCO junto à SEDUC-RS: painéis e infraestrutura territorial de dados oficiais (Censo, fluxo, SAEB/IDEB) para 497 municípios, cerca de 2.294 escolas e 654 mil matrículas.</p>
   <p>Consultor da Unidade de Migração (SCL/MIG) do Inter-American Development Bank (BID), apoiando o componente de inclusão educacional de migrantes na operação "Educação que Transforma" (Joinville/SC). Conduzo diagnósticos técnicos, análises quantitativas e qualitativas e formulação de recomendações baseadas em evidências.</p>
   <p>Coordenador de Apoio Estratégico da Secretaria Municipal de Educação de Joinville, apoiando o Secretário no monitoramento de iniciativas prioritárias, elaboração de estudos técnicos e liderança de projetos estratégicos.</p>
-  <p>Consultor de Dados e Sistemas na Fundação Getulio Vargas (FGV), apoiando a Secretaria de Estado da Educação de Sergipe na estruturação de diagnósticos, sistemas de monitoramento e análises aplicadas à aprendizagem e ao fluxo escolar.</p>
+  <p>Consultor de Dados e Sistemas na Fundação Getulio Vargas (FGV), em apoio à Secretaria de Estado da Educação de Sergipe — governo estadual do Nordeste — na estruturação de diagnósticos, sistemas de monitoramento e análises aplicadas à aprendizagem e ao fluxo escolar.</p>
+  <h2>Atuação no Nordeste</h2>
+  <p>Desde 2023, a trajetória cobre dois níveis de governo na região: a Prefeitura de São Luís/MA (Escritório de Inteligência de Dados e Superintendência de Inovação, set/2023–ago/2025) e, desde ago/2025, a consultoria à SED Sergipe via FGV, com sistemas de risco, fluxo, avaliações e painel IDEB e Censo — inclusive comparações de Sergipe com o Nordeste e o Brasil.</p>
   <h2>Escopo de Atuação</h2>
   <p>Experiência em âmbito municipal (São Luís/MA, Joinville/SC), estadual (Rio Grande do Sul, Sergipe, Mato Grosso do Sul) e em cooperação com organismos internacionais: UNESCO, BID, ABC, AFD e CAF. Trabalho com fontes oficiais (INEP, IBGE), dados territoriais e governança da informação.</p>
   </section>
@@ -253,16 +255,28 @@
   </div>
 
   <div class="project">
-    <h3>10 — Painel de Indicadores Educacionais — SEDUC-RS</h3>
-    <p class="context">UNESCO / SEDUC-RS (2026). A Secretaria da Educação do Rio Grande do Sul necessitava de um instrumento único para monitorar a rede estadual com fontes oficiais — Censo, fluxo, TDI, SAEB/IDEB e avaliação estadual — desagregado por CRE, município e escola, em 497 municípios.</p>
+    <h3>01 — Painel de Indicadores Educacionais — SEDUC-RS</h3>
+    <p class="context">UNESCO / SEDUC-RS (2026). Os dados oficiais da rede estadual existem, mas chegam como microdados de difícil uso. O painel publicado os torna consultáveis por gestores, escolas, pesquisadores e o público.</p>
     <p class="solution-label">Solução Desenvolvida</p>
-    <p class="solution">Cadeia completa da fonte oficial à interface. <strong>Diagnóstico e arquitetura:</strong> microdados INEP com layouts que mudam na série; modelo territorial estado / 30 CREs / 497 municípios / escola, com GeoJSON. <strong>ETL em Python:</strong> extração, limpeza, consolidação e JSON/planilhas documentados para atualização anual. <strong>Interface:</strong> painel web (Chart.js, Leaflet) com filtros de ano, CRE e município; mapas; tabelas; exportação; seções de matrículas, infraestrutura, docência, fluxo, desigualdades, SAEB/IDEB e visão por escola. No mesmo contrato, protótipo do Sistema de Gestão e Governança (Produto 2).</p>
-    <p class="impact">O painel passou a oferecer leitura territorial única da rede estadual — cerca de 2.294 escolas e 654 mil matrículas — com séries, comparações e recortes de desigualdade a partir de fontes oficiais. O desenho (fonte, catálogo territorial, pipeline e interface) é o mesmo tipo de infraestrutura que um observatório regional exige na primeira fase.</p>
+    <p class="solution">Painel de dados abertos com matrículas, infraestrutura, docentes, fluxo, avaliações (SAEB, IDEB, SAERS), desigualdades e visão por escola. Cobertura: 497 municípios, cerca de 2.294 escolas e 654 mil matrículas.</p>
+    <p class="impact">O painel está em uso na rede. O mesmo contrato inclui o Painel de Governança (Produto 2), para o Governador.</p>
     <div class="project-imgs">
       <img src="assets/images/projects/project10/1.jpg" alt="Projeto 10 - Hub do painel" class="project-img">
       <img src="assets/images/projects/project10/2.jpg" alt="Projeto 10 - Mapa territorial" class="project-img">
     </div>
     <p class="tags">Python · INEP / Censo · Leaflet.js · Chart.js · ETL</p>
+  </div>
+
+  <div class="project">
+    <h3>02 — Painel de Governança da Educação — SEDUC-RS</h3>
+    <p class="context">UNESCO / SEDUC-RS (2026). O ciclo mensal de governança — da escola ao Governador — precisava de um painel com recorte do mês, não só do Censo anual.</p>
+    <p class="solution-label">Solução Desenvolvida</p>
+    <p class="solution">Painel autenticado por perfil (Governador, Secretaria, coordenadoria, escola). Quatro indicadores: frequência abaixo de 75%, aulas dadas, notas abaixo da média e execução do Agiliza. Evolução, panorama por CRE, mapa e rendimento anual.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project17/2.jpg" alt="Indicadores do painel de governança" class="project-img">
+      <img src="assets/images/projects/project17/3.jpg" alt="Panorama por CRE" class="project-img">
+    </div>
+    <p class="tags">Chart.js · Leaflet.js · Cloudflare · Governança</p>
   </div>
 
   <div class="project">
@@ -276,6 +290,60 @@
       <img src="assets/images/projects/project11/2.jpg" alt="Projeto 11 - Demografia IBGE" class="project-img">
     </div>
     <p class="tags">Python · IBGE · INEP / Censo · Leaflet.js · Chart.js</p>
+  </div>
+
+  <div class="project">
+    <h3>12 — Gestão de fármacos em São Luís — ciência de dados e território</h3>
+    <p class="context">TCC da especialização USP/ESALQ (publicado como resumo executivo na Revista E&amp;S, ISSN 2675-6528, 23/02/2026). São Luís/MA dispunha da plataforma Vivver, com volume alto de movimentação de medicamentos e pouco uso analítico.</p>
+    <p class="solution-label">Solução Desenvolvida</p>
+    <p class="solution">Cadeia fonte → território → interface. <strong>Fonte:</strong> rastreabilidade Vivver (fev/2024–ago/2025), 23.258 registros, 899 produtos, 89 unidades. <strong>Território:</strong> 55 unidades georreferenciadas; mapas Folium; cruzamento com saneamento do Censo 2022 (IBGE). <strong>Análise:</strong> séries temporais, geoespacial e regressão (OLS/Ridge), com recorte em amoxicilina, albendazol e fluconazol. <strong>Interface:</strong> protótipo Streamlit com filtros, rankings, séries e mapa de calor.</p>
+    <p class="impact">O consumo se concentra em polos de referência e no período chuvoso; o albendazol se alinha a territórios com pior saneamento (Cidade Operária, Coroadinho, Vila Embratel). Unidades periféricas aparecem com registro irregular. Publicação: https://revistaes.com.br/resumo-executivo/analise-da-gestao-de-farmacos-em-sao-luis-com-ciencia-de-dados</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project12/1.png" alt="Projeto 12 - Mapa Folium de São Luís" class="project-img">
+      <img src="assets/images/projects/project12/3.png" alt="Projeto 12 - Painel Streamlit" class="project-img">
+    </div>
+    <p class="tags">Python · Folium · IBGE / Censo · Streamlit</p>
+  </div>
+
+  <div class="project">
+    <h3>04 — Painel de Obras, Licitações e Terrenos — Joinville</h3>
+    <p class="context">SED/UIN Joinville (2026). A infraestrutura escolar precisava de leitura territorial única: obras, licitações, projetos e terrenos do Plano de Expansão.</p>
+    <p class="solution-label">Solução Desenvolvida</p>
+    <p class="solution">Painel web (GAS + Leaflet) com satélite, polígonos oficiais de bairros da PMJ e pins WGS84. ETL Python de coordenadas. Medição vs meta (18 obras, média ponderada 62,8%) e esteiras terreno–projeto–licitação–obra.</p>
+    <p class="impact">A gestão passou a ver a infraestrutura no mapa do município, no mesmo ofício de um observatório territorial.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project13/1.jpg" alt="Mapa de obras Joinville" class="project-img">
+      <img src="assets/images/projects/project13/2.png" alt="Medição de obras versus meta" class="project-img">
+    </div>
+    <p class="tags">Leaflet.js · GeoJSON · Google Apps Script · Python</p>
+  </div>
+
+  <div class="project">
+    <h3>08 — Apoio à gestão do contrato BID e Plano de Expansão</h3>
+    <p class="context">Prefeitura de Joinville / BID — operação BR-L1665. Apoio técnico à gestão do programa (não à negociação do empréstimo): evidência territorial, componente de migrantes e materiais ao TCE/SC.</p>
+    <p class="solution-label">Solução Desenvolvida</p>
+    <p class="solution">Painel georreferenciado de imigrantes; bases de coordenadas do Plano de Expansão; síntese dos eixos do programa para prestação de contas; articulação com a Força-Tarefa e com o Painel de Obras.</p>
+    <p class="tags">Leaflet.js · Python · Google Apps Script</p>
+  </div>
+
+  <div class="project">
+    <h3>14 — Força Tarefa da Educação — painel da Prefeita</h3>
+    <p class="context">Monitoramento de processos licitatórios e aquisições da SED para reuniões com a Prefeita e equipes SED/SAP/PGM, inclusive itens do BID.</p>
+    <p class="solution">Painel GAS com KPIs (36 processos, 12 prioritários, 6 BID, R$ 444,2 mi), pipeline de etapas, visão executiva e comentário da gestora gravado na planilha.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project15/1.png" alt="Visão Prefeita da Força Tarefa" class="project-img">
+    </div>
+    <p class="tags">Google Apps Script · Chart.js</p>
+  </div>
+
+  <div class="project">
+    <h3>15 — Monitoramento de solicitações de auxiliares pedagógicos</h3>
+    <p class="context">SED Joinville / NEE. Cruza parecer SED, alocação EVN e RH (2.393 alunos em atendimento).</p>
+    <p class="solution">Painel GAS + cargas Python; filas de inconsistência e portal por escola.</p>
+    <div class="project-imgs">
+      <img src="assets/images/projects/project16/1.png" alt="Dashboard de auxiliares pedagógicos" class="project-img">
+    </div>
+    <p class="tags">Google Apps Script · Python</p>
   </div>
 
   <h1 id="contato">Contato</h1>

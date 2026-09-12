@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TCC USP/ESALQ: análise territorial da gestão de fármacos em São Luís/MA com ciência de dados, IBGE e mapas.">
+  <title>Gestão de fármacos em São Luís — ciência de dados e território — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">04</div>
+      <h1>Cidades inteligentes e ciência de dados — gestão de fármacos em São Luís/MA</h1>
+      <p>Análise territorial de demanda farmacêutica: base administrativa, Censo IBGE, mapas e painel para a gestão pública</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">USP/ESALQ · São Luís/MA (Nordeste)</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-map-marked-alt"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">23.258 registros · 89 unidades · 55 georreferenciadas</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">fev/2024–ago/2025 · publicado 2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>Trabalho de conclusão da especialização em Data Science and Analytics (USP/ESALQ). São Luís opera a plataforma Vivver, que registra a movimentação de medicamentos na rede municipal. O volume de dados existia; faltava transformá-lo em leitura territorial para a gestão — o mesmo encadeamento de um observatório: diagnosticar a fonte, recortar o território e devolver um instrumento de uso institucional.</p>
+          <p>O problema era compreender padrões temporais e territoriais de consumo e subsidiar abastecimento e monitoramento. A premissa: mesmo com restrições orçamentárias, dá para construir uma solução de baixo custo a partir da base administrativa já existente, cruzada com o Censo 2022 (IBGE).</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Mapas e figuras do TCC</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project12/1.png" alt="Mapa interativo do consumo de fármacos nas unidades de saúde de São Luís">
+              <figcaption>Mapa Folium da rede municipal: pontos por unidade, mapa de calor do consumo total e série mensal ao selecionar um estabelecimento</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project12/2.png" alt="Ranking das 15 unidades de saúde com maior volume de consumo em São Luís">
+              <figcaption>Concentração territorial da demanda: as 15 unidades com maior volume de consumo (jul/2024–ago/2025)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project12/3.png" alt="Protótipo do painel Streamlit de análise por unidade de saúde">
+              <figcaption>Protótipo do painel (Streamlit): filtros por período, produto e unidade, com série temporal e ranking para o gestor</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project12/4.png" alt="Série temporal do consumo de albendazol em São Luís">
+              <figcaption>Série do albendazol: pico no período chuvoso, cruzado no TCC com saneamento precário no Censo IBGE (Cidade Operária, Coroadinho, Vila Embratel)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>A cadeia foi fonte administrativa → território → modelo → interface:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Fonte:</strong> relatório de rastreabilidade da Vivver (saídas de consumo e transferência), fevereiro de 2024 a agosto de 2025 — 23.258 registros, 899 produtos e 89 unidades solicitantes</li>
+            <li><i class="fas fa-check"></i> <strong>Território:</strong> coordenadas das 55 principais unidades; mapas interativos (Folium); cruzamento com indicadores de saneamento do Censo 2022 (IBGE)</li>
+            <li><i class="fas fa-check"></i> <strong>ETL em Python:</strong> pandas e numpy para limpeza, datas, estações do ano e conversão de saídas negativas em consumo absoluto</li>
+            <li><i class="fas fa-check"></i> <strong>Análise:</strong> descritiva, séries temporais, geoespacial e regressão (OLS e Ridge). Recorte aprofundado em amoxicilina, albendazol e fluconazol</li>
+            <li><i class="fas fa-check"></i> <strong>Interface:</strong> protótipo em Streamlit com filtros, rankings, séries e mapa de calor para uso tático, operacional e estratégico</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Vivver Saúde Pública — Farmácia e Almoxarifado (rastreabilidade de produtos)</li>
+            <li><i class="fas fa-table"></i> Censo Demográfico 2022 (IBGE) — indicadores de saneamento por território</li>
+            <li><i class="fas fa-table"></i> Coordenadas geográficas das unidades de saúde (latitude/longitude)</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Folium</span>
+            <span class="tag">IBGE / Censo</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">statsmodels</span>
+            <span class="tag">scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O consumo não é homogêneo: concentra-se em polos de referência e coincide com o período chuvoso. O albendazol se alinha visualmente a bairros com pior saneamento no Censo IBGE. Unidades periféricas aparecem com registro baixo ou irregular — hipótese de falha logística ou de subnotificação. O painel devolve isso ao gestor. Resumo executivo publicado na Revista E&S (ISSN 2675-6528), em 23 de fevereiro de 2026.</p>
+            <p>Publicação: <a href="https://revistaes.com.br/resumo-executivo/analise-da-gestao-de-farmacos-em-sao-luis-com-ciencia-de-dados" target="_blank" rel="noopener">revistaes.com.br/resumo-executivo/analise-da-gestao-de-farmacos-em-sao-luis-com-ciencia-de-dados</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

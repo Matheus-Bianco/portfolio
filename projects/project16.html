@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel de solicitações de auxiliares pedagógicos da educação especial na rede municipal de Joinville.">
+  <title>Monitoramento de Auxiliares Pedagógicos — Joinville — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">16</div>
+      <h1>Monitoramento de solicitações de auxiliares pedagógicos</h1>
+      <p>Cruza parecer da SED, alocação no EVN e RH para a educação especial da rede municipal</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">SED Joinville · NEE</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-school"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">2.393 alunos em atendimento · cruzamento EVN × SED</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A escola abre o processo no SEI; a equipe de educação especial dá o parecer; o RH aloca o auxiliar. Sem um cruzamento das bases, a Secretaria não via a diferença entre o que foi deferido e o que está de fato na escola. O painel existe para essa reconciliação — equipe NEE e unidades escolares.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Interface</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project16/1.png" alt="Dashboard do painel de auxiliares pedagógicos da educação especial">
+              <figcaption>Visão geral do atendimento: 2.393 alunos com alocação no EVN, 2.114 com parecer da SED, filas de indeferidos e tipo de atendimento (exclusivo, parcial, volante)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Integra cinco bases (EVN alunos, EVN alocações, solicitações da SED, Sênior/RH e quadro NGP). Dashboard, planilha gerencial, filas de inconsistência (indeferido na SED com alocação no EVN, EVN sem solicitação, possível dupla contagem) e portal por escola. Carga das bases em Python; interface em Google Apps Script.</p>
+          <p>A unidade de análise é a escola — ainda sem camada de mapa. O valor para a gestão é a rastreabilidade do processo público de alocação.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Python</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">Google Sheets</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>A equipe NEE e as escolas passaram a operar o mesmo recorte: parecer, alocação e força de trabalho visíveis, com filas que apontam divergência em vez de planilhas paralelas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Matheus Bianco — Dados, sistemas e soluções tecnológicas para gestão</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

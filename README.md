@@ -78,6 +78,7 @@ git push -u origin main
 │   ├── project9.html   # Strategic Monitoring — Joinville
 │   ├── project10.html  # Educational Indicators Panel — SEDUC-RS / UNESCO
 │   └── project11.html  # Open Data Panel — Joinville Education
+    └── project12.html  # São Luís pharmaceuticals — territorial data (USP/ESALQ)
 └── README.md
 ```
 
