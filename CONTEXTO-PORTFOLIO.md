@@ -31,17 +31,17 @@ Portfólio profissional de projetos em dados, sistemas e políticas públicas ed
 
 ## Projetos (16, ordem PNUD)
 
-1. **Plataforma de Indicadores de Risco Educacional** — SED Sergipe/FGV
+1. **Plataforma de Indicadores de Risco Educacional** — SEED Sergipe/FGV
 2. **Painel de Monitoramento de Estudantes Imigrantes** — Joinville / BID
-3. **Sistema de Acompanhamento de Dados GA/SE** — SED Sergipe/FGV
-4. **Sistema de Gestão de Avaliações Diagnósticas** — SED Sergipe/FGV
+3. **Sistema de Acompanhamento de Dados GA/SE** — SEED Sergipe/FGV
+4. **Sistema de Gestão de Avaliações Diagnósticas** — SEED Sergipe/FGV
 5. **Painel de Recomposição de Aprendizagens** — Joinville
-6. **Sistema de Monitoramento Temporal de Risco** — SED Sergipe/FGV
-7. **Sistema de Priorização de Escolas para o SAEB** — SED Sergipe/FGV
-8. **Painel de Indicadores Educacionais — IDEB & Censo** — SED Sergipe/FGV
+6. **Sistema de Monitoramento Temporal de Risco** — SEED Sergipe/FGV
+7. **Sistema de Priorização de Escolas para o SAEB** — SEED Sergipe/FGV
+8. **Painel de Indicadores Educacionais — IDEB & Censo** — SEED Sergipe/FGV
 9. **Sistema de Monitoramento Estratégico SED Joinville** — Joinville (PEI 2025-2029)
-10. **Painel de Indicadores Educacionais — SEDUC-RS** — UNESCO / SEDUC-RS (Produto 4)
-10b. **Painel de Governança da Educação** — UNESCO / SEDUC-RS (Produto 2; arquivo `project17.html`)
+10. **Painel de Indicadores Educacionais — SEDUC-RS** — UNESCO / SEDUC-RS (contrato ED00585/2026)
+10b. **Painel de Governança da Educação** — UNESCO / SEDUC-RS (painel gerencial; arquivo `project17.html`)
 11. **Painel de Dados Abertos — Educação Joinville** — SME Joinville (IBGE + INEP)
 12. **Gestão de fármacos em São Luís — ciência de dados e território** — TCC USP/ESALQ (mapa Folium + IBGE; resumo na Revista E&S)
 13. **Painel de Obras / Infra** — SED/UIN Joinville (Leaflet + bairros PMJ)

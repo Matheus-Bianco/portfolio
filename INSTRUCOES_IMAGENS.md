@@ -30,7 +30,7 @@ assets/
     └── projects/
         ├── project1/    ← Plataforma de Indicadores de Risco
         ├── project2/    ← Painel de Estudantes Imigrantes
-        ├── project3/    ← Sistema GA/SE (SED Sergipe)
+        ├── project3/    ← Sistema GA/SE (SEED Sergipe)
         ├── project4/    ← Sistema de Avaliações Diagnósticas
         ├── project5/    ← Painel de Recomposição
         ├── project6/    ← Monitoramento Temporal de Risco
