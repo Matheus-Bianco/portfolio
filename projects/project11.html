@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel de Dados Abertos da Educação de Joinville: indicadores oficiais INEP e demografia IBGE para a rede municipal.">
+  <title>Painel de Dados Abertos — Educação Joinville — Portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar--solid">
+    <div class="container">
+      <a href="../index.html" class="navbar__logo">Portfólio</a>
+      <div class="navbar__links">
+        <a href="../index.html">Início</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../skills.html">Competências</a>
+        <a href="../projects.html" class="active">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="navbar__social">
+        <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="project-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+      <div class="project-hero__number">11</div>
+      <h1>Painel de Dados Abertos — Educação Joinville</h1>
+      <p>Indicadores oficiais e demografia IBGE em plataforma pública da rede municipal</p>
+    </div>
+  </div>
+
+  <section class="section section--project-content">
+    <div class="container">
+      <div class="project-meta-cards">
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-building"></i></div>
+          <span class="project-meta-card__label">Instituição</span>
+          <span class="project-meta-card__value">Secretaria de Educação de Joinville/SC</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-school"></i></div>
+          <span class="project-meta-card__label">Escala</span>
+          <span class="project-meta-card__value">Rede municipal · município IBGE 4209102</span>
+        </div>
+        <div class="project-meta-card">
+          <div class="project-meta-card__icon"><i class="fas fa-calendar"></i></div>
+          <span class="project-meta-card__label">Período</span>
+          <span class="project-meta-card__value">2026</span>
+        </div>
+      </div>
+
+      <div class="project-detail">
+
+        <div class="project-section">
+          <h2><i class="fas fa-info-circle"></i> Contexto e Problema</h2>
+          <p>A Secretaria Municipal de Educação de Joinville precisava de um painel público — governo–cidadão e governo–gestor — que reunisse fontes oficiais do município: demografia do Censo IBGE, microdados do INEP (Censo Escolar, fluxo, TDI, SAEB/IDEB) e visão por escola da rede municipal.</p>
+          <p>O recorte é o município (código IBGE 4209102), com unidade de análise na escola. Sem uma arquitetura comum de território, indicador e período, a gestão e o público não consultam a mesma série nem extraem os dados de forma aberta.</p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-images"></i> Imagens do Sistema</h2>
+          <div class="project-screenshots">
+            <figure class="project-screenshot project-screenshot--small">
+              <img src="../assets/images/projects/project11/1.jpg" alt="Hub do Painel de Dados Abertos da Educação de Joinville">
+              <figcaption>Hub do painel: seções de demografia IBGE, matrículas, redes, fluxo, SAEB/IDEB, visão por escola e extração</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project11/2.jpg" alt="Demografia do Censo IBGE no painel de Joinville">
+              <figcaption>Demografia (Censo IBGE): população e recortes municipais a partir de fonte oficial do IBGE</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project11/3.jpg" alt="Acesso e matrículas da rede municipal de Joinville">
+              <figcaption>Acesso e matrículas da rede municipal: KPIs, série histórica e recortes por etapa (Censo Escolar / INEP)</figcaption>
+            </figure>
+            <figure class="project-screenshot project-screenshot--large">
+              <img src="../assets/images/projects/project11/4.jpg" alt="Visão por escola no mapa de Joinville">
+              <figcaption>Visão por escola: mapa de pontos da rede municipal com indicadores consolidados por unidade</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-lightbulb"></i> Solução Desenvolvida</h2>
+          <p>Concebi e implementei o painel público da rede municipal, com a mesma cadeia fonte oficial → território → interface:</p>
+          <ul>
+            <li><i class="fas fa-check"></i> <strong>Fontes oficiais:</strong> Censo Demográfico do IBGE e microdados do INEP (Censo Escolar, rendimento, TDI, SAEB, IDEB), recortados para Joinville</li>
+            <li><i class="fas fa-check"></i> <strong>Arquitetura municipal:</strong> município IBGE 4209102, rede municipal e escola como unidade de análise; contorno em GeoJSON e pontos por latitude/longitude do Censo</li>
+            <li><i class="fas fa-check"></i> <strong>ETL em Python:</strong> extração, limpeza e JSON/planilhas para o painel, com atualização anual</li>
+            <li><i class="fas fa-check"></i> <strong>Interface aberta:</strong> aplicação web (HTML/JS/CSS, Chart.js, Leaflet), filtros por ano, mapas por escola, gráficos e área de extração para download</li>
+            <li><i class="fas fa-check"></i> <strong>Seções:</strong> demografia IBGE, acesso e matrículas, ensino superior, visão por redes, infraestrutura, ICG, INSE, docência, AFD, esforço docente, fluxo, TDI, SAEB, IDEB e visão por escola</li>
+          </ul>
+          <p>Painel público: <a href="https://matheus-bianco.github.io/painel-indicadores-joinville/" target="_blank" rel="noopener">matheus-bianco.github.io/painel-indicadores-joinville</a></p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-database"></i> Bases de Dados Utilizadas</h2>
+          <ul>
+            <li><i class="fas fa-table"></i> Censo Demográfico (IBGE) — município 4209102</li>
+            <li><i class="fas fa-table"></i> Microdados do Censo Escolar (INEP) — matrículas, infraestrutura, docentes</li>
+            <li><i class="fas fa-table"></i> Taxas de rendimento e TDI (INEP)</li>
+            <li><i class="fas fa-table"></i> SAEB e IDEB (INEP)</li>
+            <li><i class="fas fa-table"></i> Contorno municipal e coordenadas das escolas</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-cogs"></i> Tecnologias Utilizadas</h2>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">ETL</span>
+            <span class="tag">IBGE</span>
+            <span class="tag">INEP / Censo</span>
+            <span class="tag">Chart.js</span>
+            <span class="tag">Leaflet.js</span>
+            <span class="tag">HTML / CSS / JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-chart-bar"></i> Resultados e Impacto</h2>
+          <div class="impact-box">
+            <p>O painel tornou públicos, em um só lugar, os indicadores da educação municipal de Joinville — cerca de 79 mil matrículas, com demografia IBGE, séries do INEP e mapa por escola. Gestores e cidadãos consultam e extraem os mesmos dados oficiais. É uma plataforma de relacionamento governo–cidadão construída sobre infraestrutura territorial de fontes oficiais.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">&copy; 2026 Portfólio — Ciência de Dados & Políticas Públicas.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/matheus-ibelli-bianco-505155220/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Matheus-Bianco" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>

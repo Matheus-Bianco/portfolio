@@ -37,7 +37,8 @@ assets/
         ├── project7/    ← Priorização SAEB
         ├── project8/    ← Painel IDEB & Censo
         ├── project9/    ← Monitoramento Estratégico Joinville
-        └── project10/   ← Painel Indicadores SEDUC-RS / UNESCO
+        ├── project10/   ← Painel Indicadores SEDUC-RS / UNESCO
+        └── project11/   ← Painel Dados Abertos Joinville
 ```
 
 **As pastas `project1` a `project8` já existem.** Basta colocar as imagens dentro delas.

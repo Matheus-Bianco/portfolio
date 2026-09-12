@@ -76,7 +76,8 @@ git push -u origin main
 │   ├── project7.html   # School Prioritization System for SAEB
 │   ├── project8.html   # Educational Indicators Panel (IDEB & Census)
 │   ├── project9.html   # Strategic Monitoring — Joinville
-│   └── project10.html  # Educational Indicators Panel — SEDUC-RS / UNESCO
+│   ├── project10.html  # Educational Indicators Panel — SEDUC-RS / UNESCO
+│   └── project11.html  # Open Data Panel — Joinville Education
 └── README.md
 ```
 

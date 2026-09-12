@@ -642,6 +642,7 @@ ul {
 .project-card:nth-child(8) .project-card__image { background: linear-gradient(135deg, #1a365d, #2b6cb0); }
 .project-card:nth-child(9) .project-card__image { background: linear-gradient(135deg, #2d1b4e, #1f3661); }
 .project-card:nth-child(10) .project-card__image { background: linear-gradient(135deg, #1a365d, #c4953a); }
+.project-card:nth-child(11) .project-card__image { background: linear-gradient(135deg, #1a365d, #2b6cb0); }
 
 /* --- Project Detail Page --- */
 .project-hero {

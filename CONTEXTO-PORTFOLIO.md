@@ -24,12 +24,12 @@ Portfólio profissional de projetos em dados, sistemas e políticas públicas ed
 - `about.html` — Sobre Mim
 - `skills.html` — Competências (inclui IBGE, APIs oficiais, dados territoriais)
 - `projects.html` — Grid de projetos
-- `projects/project1.html` a `project10.html` — Detalhes de cada projeto
+- `projects/project1.html` a `project11.html` — Detalhes de cada projeto
 - `contact.html` — Contato
 
 ---
 
-## Projetos (10)
+## Projetos (11)
 
 1. **Plataforma de Indicadores de Risco Educacional** — SED Sergipe/FGV
 2. **Painel de Monitoramento de Estudantes Imigrantes** — Joinville / BID
@@ -41,6 +41,7 @@ Portfólio profissional de projetos em dados, sistemas e políticas públicas ed
 8. **Painel de Indicadores Educacionais — IDEB & Censo** — SED Sergipe/FGV
 9. **Sistema de Monitoramento Estratégico SED Joinville** — Joinville (PEI 2025-2029)
 10. **Painel de Indicadores Educacionais — SEDUC-RS** — UNESCO / SEDUC-RS (Produto 4)
+11. **Painel de Dados Abertos — Educação Joinville** — SME Joinville (IBGE + INEP)
 
 ### Escopo agregado (home)
 - **~2.660 escolas:** 2.294 RS + 202 Sergipe + 166 Joinville
@@ -76,6 +77,8 @@ npm run generate-pdf   # Gera portfolio-relatorio.pdf
 ## Prints do Projeto 10
 
 Prints em `assets/images/projects/project10/` capturados de https://indicadores.educacao.rs.gov.br/ (hub, acesso/matrículas, fluxo e visão por escola). Regenerar: `node scripts/capture-project10.js`.
+
+Prints em `assets/images/projects/project11/` capturados de https://matheus-bianco.github.io/painel-indicadores-joinville/ (hub, demografia IBGE, acesso e visão por escola). Regenerar: `node scripts/capture-project11.js`.
 
 ---
 
