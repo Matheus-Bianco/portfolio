@@ -75,7 +75,7 @@ npm run generate-pdf   # Gera portfolio-relatorio.pdf
 
 ## Prints do Projeto 10
 
-Substituir os placeholders em `assets/images/projects/project10/` (1.jpg a 4.jpg) pelos prints reais do painel da SEDUC-RS.
+Prints em `assets/images/projects/project10/` capturados de https://indicadores.educacao.rs.gov.br/ (hub, acesso/matrículas, fluxo e visão por escola). Regenerar: `node scripts/capture-project10.js`.
 
 ---
 
